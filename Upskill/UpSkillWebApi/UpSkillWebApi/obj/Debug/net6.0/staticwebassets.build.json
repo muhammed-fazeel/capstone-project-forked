@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "xE+8WHEXXyyCLsCTn/4agAvzCenVmerpJcnBo4Jb8lk=",
+  "Source": "UpSkillWebApi",
+  "BasePath": "_content/UpSkillWebApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
