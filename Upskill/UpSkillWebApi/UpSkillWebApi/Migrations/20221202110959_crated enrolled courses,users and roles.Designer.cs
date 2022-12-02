@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using UpSkillWebApi.Models;
 
@@ -11,9 +12,11 @@ using UpSkillWebApi.Models;
 namespace UpSkillWebApi.Migrations
 {
     [DbContext(typeof(UpSkillDbContext))]
-    partial class UpSkillDbContextModelSnapshot : ModelSnapshot
+    [Migration("20221202110959_crated enrolled courses,users and roles")]
+    partial class cratedenrolledcoursesusersandroles
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -184,6 +187,9 @@ namespace UpSkillWebApi.Migrations
                     b.Property<int>("RoleId")
                         .HasColumnType("int");
 
+                    b.Property<int?>("UserId1")
+                        .HasColumnType("int");
+
                     b.Property<string>("UserName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -191,6 +197,8 @@ namespace UpSkillWebApi.Migrations
                     b.HasKey("UserId");
 
                     b.HasIndex("RoleId");
+
+                    b.HasIndex("UserId1");
 
                     b.ToTable("User");
                 });
@@ -244,7 +252,7 @@ namespace UpSkillWebApi.Migrations
                         .IsRequired();
 
                     b.HasOne("UpSkillWebApi.Models.User", "User")
-                        .WithMany("EnrolledCourses")
+                        .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -272,6 +280,10 @@ namespace UpSkillWebApi.Migrations
                         .HasForeignKey("RoleId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.HasOne("UpSkillWebApi.Models.User", null)
+                        .WithMany("users")
+                        .HasForeignKey("UserId1");
 
                     b.Navigation("Role");
                 });
@@ -308,7 +320,7 @@ namespace UpSkillWebApi.Migrations
 
             modelBuilder.Entity("UpSkillWebApi.Models.User", b =>
                 {
-                    b.Navigation("EnrolledCourses");
+                    b.Navigation("users");
                 });
 #pragma warning restore 612, 618
         }

@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using UpSkillWebApi.Models;
 
@@ -11,9 +12,11 @@ using UpSkillWebApi.Models;
 namespace UpSkillWebApi.Migrations
 {
     [DbContext(typeof(UpSkillDbContext))]
-    partial class UpSkillDbContextModelSnapshot : ModelSnapshot
+    [Migration("20221202105003_crated table video links")]
+    partial class cratedtablevideolinks
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -89,29 +92,6 @@ namespace UpSkillWebApi.Migrations
                     b.ToTable("Course");
                 });
 
-            modelBuilder.Entity("UpSkillWebApi.Models.EnrolledCourses", b =>
-                {
-                    b.Property<int>("EnrolledCoursesId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("EnrolledCoursesId"));
-
-                    b.Property<int>("CourseID")
-                        .HasColumnType("int");
-
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
-
-                    b.HasKey("EnrolledCoursesId");
-
-                    b.HasIndex("CourseID");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("EnrolledCourses");
-                });
-
             modelBuilder.Entity("UpSkillWebApi.Models.Review", b =>
                 {
                     b.Property<int>("ReviewId")
@@ -142,57 +122,6 @@ namespace UpSkillWebApi.Migrations
                     b.HasIndex("CourseId");
 
                     b.ToTable("Review");
-                });
-
-            modelBuilder.Entity("UpSkillWebApi.Models.Role", b =>
-                {
-                    b.Property<int>("RoleId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("RoleId"));
-
-                    b.Property<string>("RoleName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("RoleId");
-
-                    b.ToTable("Role");
-                });
-
-            modelBuilder.Entity("UpSkillWebApi.Models.User", b =>
-                {
-                    b.Property<int>("UserId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("UserId"));
-
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Password")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("PictureUrl")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("RoleId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("UserName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("UserId");
-
-                    b.HasIndex("RoleId");
-
-                    b.ToTable("User");
                 });
 
             modelBuilder.Entity("UpSkillWebApi.Models.VideoLinks", b =>
@@ -235,25 +164,6 @@ namespace UpSkillWebApi.Migrations
                     b.Navigation("Category");
                 });
 
-            modelBuilder.Entity("UpSkillWebApi.Models.EnrolledCourses", b =>
-                {
-                    b.HasOne("UpSkillWebApi.Models.Course", "Course")
-                        .WithMany("EnrolledCourses")
-                        .HasForeignKey("CourseID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("UpSkillWebApi.Models.User", "User")
-                        .WithMany("EnrolledCourses")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Course");
-
-                    b.Navigation("User");
-                });
-
             modelBuilder.Entity("UpSkillWebApi.Models.Review", b =>
                 {
                     b.HasOne("UpSkillWebApi.Models.Course", "Course")
@@ -263,17 +173,6 @@ namespace UpSkillWebApi.Migrations
                         .IsRequired();
 
                     b.Navigation("Course");
-                });
-
-            modelBuilder.Entity("UpSkillWebApi.Models.User", b =>
-                {
-                    b.HasOne("UpSkillWebApi.Models.Role", "Role")
-                        .WithMany("Users")
-                        .HasForeignKey("RoleId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Role");
                 });
 
             modelBuilder.Entity("UpSkillWebApi.Models.VideoLinks", b =>
@@ -294,21 +193,9 @@ namespace UpSkillWebApi.Migrations
 
             modelBuilder.Entity("UpSkillWebApi.Models.Course", b =>
                 {
-                    b.Navigation("EnrolledCourses");
-
                     b.Navigation("Reviews");
 
                     b.Navigation("VideoLinks");
-                });
-
-            modelBuilder.Entity("UpSkillWebApi.Models.Role", b =>
-                {
-                    b.Navigation("Users");
-                });
-
-            modelBuilder.Entity("UpSkillWebApi.Models.User", b =>
-                {
-                    b.Navigation("EnrolledCourses");
                 });
 #pragma warning restore 612, 618
         }

@@ -20,6 +20,9 @@ namespace UpSkillWebApi.Models
         public string ThumbnailUrl { get; set; }
         public string Description { get; set; }
         public Category Category { get; set; }
+        public ICollection<Review> Reviews { get; set; }
+        public ICollection<VideoLinks> VideoLinks { get; set; }
+        public ICollection<EnrolledCourses> EnrolledCourses { get; set; }
         
     }
 }
