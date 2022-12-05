@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "@emailjs/browser": "^3.10.0",
+    "emailjs": "^4.0.1",
+    "ng-snotify": "^9.0.1"
+  }
+}
