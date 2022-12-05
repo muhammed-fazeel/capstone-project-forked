@@ -12,6 +12,6 @@ namespace UpSkillWebApi.Models
         public string Email { get; set; }
         public string PictureUrl { get; set; }
         public Role Role { get; set; }
-        public ICollection<EnrolledCourses> EnrolledCourses { get; set; }
+        public ICollection<EnrolledCourses> EnrolledCourses { get;  }
     }
 }

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\dhruv.kanthaliya\\Documents\\capstone-project\\Upskill\\UpSkillWebApi\\UpSkillWebApi\\UpSkillWebApi.csproj": {}
+    "C:\\Users\\muhamed.faseel\\OneDrive - Happiest Minds Technologies Limited\\Desktop\\capstone_project\\capstone-project\\Upskill\\UpSkillWebApi\\UpSkillWebApi\\UpSkillWebApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\dhruv.kanthaliya\\Documents\\capstone-project\\Upskill\\UpSkillWebApi\\UpSkillWebApi\\UpSkillWebApi.csproj": {
+    "C:\\Users\\muhamed.faseel\\OneDrive - Happiest Minds Technologies Limited\\Desktop\\capstone_project\\capstone-project\\Upskill\\UpSkillWebApi\\UpSkillWebApi\\UpSkillWebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dhruv.kanthaliya\\Documents\\capstone-project\\Upskill\\UpSkillWebApi\\UpSkillWebApi\\UpSkillWebApi.csproj",
+        "projectUniqueName": "C:\\Users\\muhamed.faseel\\OneDrive - Happiest Minds Technologies Limited\\Desktop\\capstone_project\\capstone-project\\Upskill\\UpSkillWebApi\\UpSkillWebApi\\UpSkillWebApi.csproj",
         "projectName": "UpSkillWebApi",
-        "projectPath": "C:\\Users\\dhruv.kanthaliya\\Documents\\capstone-project\\Upskill\\UpSkillWebApi\\UpSkillWebApi\\UpSkillWebApi.csproj",
-        "packagesPath": "C:\\Users\\dhruv.kanthaliya\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dhruv.kanthaliya\\Documents\\capstone-project\\Upskill\\UpSkillWebApi\\UpSkillWebApi\\obj\\",
+        "projectPath": "C:\\Users\\muhamed.faseel\\OneDrive - Happiest Minds Technologies Limited\\Desktop\\capstone_project\\capstone-project\\Upskill\\UpSkillWebApi\\UpSkillWebApi\\UpSkillWebApi.csproj",
+        "packagesPath": "C:\\Users\\muhamed.faseel\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\muhamed.faseel\\OneDrive - Happiest Minds Technologies Limited\\Desktop\\capstone_project\\capstone-project\\Upskill\\UpSkillWebApi\\UpSkillWebApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\dhruv.kanthaliya\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\muhamed.faseel\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -78,7 +78,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

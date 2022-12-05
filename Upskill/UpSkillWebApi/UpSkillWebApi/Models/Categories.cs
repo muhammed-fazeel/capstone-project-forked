@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.Net;
 
 namespace UpSkillWebApi.Models
 {
@@ -9,6 +10,8 @@ namespace UpSkillWebApi.Models
         public string CategoryName { get; set; }
         public string ImageUrl { get; set; }
 
-        public ICollection<Course> Course { get; set; }
+
+        private ICollection<Course> _courses;
+        public virtual ICollection<Course>? Course{ get;}   
     }
 }

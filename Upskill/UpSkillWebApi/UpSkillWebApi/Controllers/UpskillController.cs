@@ -20,7 +20,7 @@ namespace UpSkillWebApi.Controllers
         [Route("GetAllCategories")]
         public IEnumerable<Category> GetAllCategories()
         {
-            return  dal.GetAllCategories();   
+            return dal.GetAllCategories();
         }
 
         [HttpGet]
@@ -30,33 +30,130 @@ namespace UpSkillWebApi.Controllers
             return dal.GetAllCourses();
         }
 
+        [HttpPost]
+        [Route("AddCourse")]
+        public void AddCourse(Course course)
+        {
+            dal.AddCourse(course);
+        }
+
+        [HttpGet]
+        [Route("GetCourse/{id:int}")]
+        public Course GetCourse(int id)
+        {
+            return dal.GetCourse(id);
+        }
+
+        [HttpGet]
+        [Route("GetCoursesByCategoryId/{CatIid:int}")]
+        public List<Course> GetCoursesByCategory(int CatId)
+        {
+            return dal.GetCoursesByCategory(CatId);
+        }
+
+        //Category
+
+        [HttpPost]
+        [Route("AddCategory")]
+        public void AddCategory(Category category)
+        {
+            dal.AddCategory(category);
+        }
+
+        //reviews
+
+        [HttpPost]
+        [Route("AddReview")]
+        public void AddReview(Review review)
+        {
+            dal.AddReview(review);
+        }
+
+        [HttpGet]
+        [Route("GetReviews/{CourseId}")]
+        public List<Review> GetReviews(int CourseId)
+        {
+            return dal.GetReviews(CourseId);
+        }
+
+        //videolinks
+        [HttpGet]
+        [Route("GetVideos/{id}")]
+        public List<VideoLinks> GetVideos(int id)
+        {
+            return dal.GetVideoLinksByCourseId(id);
+        }
+
+        [HttpPost]
+        [Route("AddVideo")]
+        public void AddVideo(VideoLinks video)
+        {
+            dal.AddVideo(video);
+        }
+
+        [HttpDelete]
+        [Route("DeleteVideo/{id}")]
+        public void DeleteVideo(int id)
+        {
+            dal.DeleteVideo(id);
+        }
+
+        //enrolled courses
+        [HttpGet]
+        [Route("GetEnrolledCourses")]
+        public List<EnrolledCourses> GetEnrolledCourses(int userid)
+        {
+            return dal.GetAllEnrolledCoursesByUserId(userid);
+        }
+        //add enrolled course
+
+        //roles
+        [HttpGet]
+        [Route("GetRoles")]
+        public Role GetRole(int id)
+        {
+            return dal.GetRole(id);
+        }
+
+        [HttpPost]
+        [Route("AddUser")]
+        public void AddUser(User user)
+        {
+            dal.AddUser(user);
+        }
+
+
+
+
+
+
 
 
 
 
         // GET api/<Controller>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
-        {
-            return "value";
-        }
+        //[HttpGet("{id}")]
+        //public string Get(int id)
+        //{
+        //    return "value";
+        //}
 
         // POST api/<Controller>
-        [HttpPost]
-        public void Post([FromBody] string value)
-        {
-        }
+        //[HttpPost]
+        //public void Post([FromBody] string value)
+        //{
+        //}
 
-        // PUT api/<Controller>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
+        //// PUT api/<Controller>/5
+        //[HttpPut("{id}")]
+        //public void Put(int id, [FromBody] string value)
+        //{
+        //}
 
-        // DELETE api/<Controller>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
-        }
+        //// DELETE api/<Controller>/5
+        //[HttpDelete("{id}")]
+        //public void Delete(int id)
+        //{
+        //}
     }
 }

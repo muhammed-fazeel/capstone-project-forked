@@ -10,7 +10,7 @@ namespace UpSkillWebApi.Models
         public string Url { get; set; }
         public float Duration { get; set; }
         public string Title { get; set; }
-        public Course Course { get; set; }
+        public Course? Course { get;  }
 
     }
 }

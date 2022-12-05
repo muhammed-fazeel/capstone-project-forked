@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using UpSkillWebApi.Models;
 
@@ -11,9 +12,11 @@ using UpSkillWebApi.Models;
 namespace UpSkillWebApi.Migrations
 {
     [DbContext(typeof(UpSkillDbContext))]
-    partial class UpSkillDbContextModelSnapshot : ModelSnapshot
+    [Migration("20221205044446_added table vidlinks")]
+    partial class addedtablevidlinks
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -237,26 +240,32 @@ namespace UpSkillWebApi.Migrations
 
             modelBuilder.Entity("UpSkillWebApi.Models.EnrolledCourses", b =>
                 {
-                    b.HasOne("UpSkillWebApi.Models.Course", null)
+                    b.HasOne("UpSkillWebApi.Models.Course", "Course")
                         .WithMany("EnrolledCourses")
                         .HasForeignKey("CourseID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("UpSkillWebApi.Models.User", null)
+                    b.HasOne("UpSkillWebApi.Models.User", "User")
                         .WithMany("EnrolledCourses")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Course");
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("UpSkillWebApi.Models.Review", b =>
                 {
-                    b.HasOne("UpSkillWebApi.Models.Course", null)
+                    b.HasOne("UpSkillWebApi.Models.Course", "Course")
                         .WithMany("Reviews")
                         .HasForeignKey("CourseId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Course");
                 });
 
             modelBuilder.Entity("UpSkillWebApi.Models.User", b =>
@@ -272,11 +281,13 @@ namespace UpSkillWebApi.Migrations
 
             modelBuilder.Entity("UpSkillWebApi.Models.VideoLinks", b =>
                 {
-                    b.HasOne("UpSkillWebApi.Models.Course", null)
+                    b.HasOne("UpSkillWebApi.Models.Course", "Course")
                         .WithMany("VideoLinks")
                         .HasForeignKey("CourseId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Course");
                 });
 
             modelBuilder.Entity("UpSkillWebApi.Models.Category", b =>

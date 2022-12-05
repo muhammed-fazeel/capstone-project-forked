@@ -8,6 +8,7 @@ namespace UpSkillWebApi.Models
     public class Course
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int CourseId { get; set; }
         [ForeignKey("CategoryId")]
         public int CategoryId { get; set; }
@@ -19,10 +20,10 @@ namespace UpSkillWebApi.Models
         public int NoOfLectures { get; set; }
         public string ThumbnailUrl { get; set; }
         public string Description { get; set; }
-        public Category Category { get; set; }
-        public ICollection<Review> Reviews { get; set; }
-        public ICollection<VideoLinks> VideoLinks { get; set; }
-        public ICollection<EnrolledCourses> EnrolledCourses { get; set; }
+        public Category? Category { get; }
+        public ICollection<Review>? Reviews { get; }
+        public ICollection<VideoLinks>? VideoLinks { get; }
+        public ICollection<EnrolledCourses>? EnrolledCourses { get; }
         
     }
 }

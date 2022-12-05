@@ -1,4 +1,6 @@
-﻿namespace UpSkillWebApi.Models
+﻿using Microsoft.EntityFrameworkCore;
+
+namespace UpSkillWebApi.Models
 {
     public class UpSkillEFDAO : IDatabase
     {
@@ -10,37 +12,61 @@
 
         public void AddCategory(Category category)
         {
-            throw new NotImplementedException();
+            dbCtx.Add(category);
+            dbCtx.SaveChanges();
         }
 
         public void AddCourse(Course course)
         {
-            throw new NotImplementedException();
+            dbCtx.Add(course);
+            dbCtx.SaveChanges();
         }
 
         public void AddCourse(EnrolledCourses course, int UserId)
         {
-            throw new NotImplementedException();
+           throw new NotImplementedException();
         }
 
         public void AddReview(Review review)
         {
-            throw new NotImplementedException();
+            dbCtx.Add(review);
+            dbCtx.SaveChanges();
         }
 
         public void AddVideo(VideoLinks video)
+        {
+            dbCtx.Add(video);
+            dbCtx.SaveChanges();
+        }
+
+        public void DeleteAllVideos(int CourseID)
         {
             throw new NotImplementedException();
         }
 
         public void DeleteCourse(int CourseId)
         {
-            throw new NotImplementedException();
+            //write code to delete video links
+            var course = dbCtx.Course.Where(o => o.CourseId == CourseId).SingleOrDefault();
+            //delete if found
+            if (course != null)
+            {
+                dbCtx.Remove(course);
+                dbCtx.SaveChanges();
+            }
         }
 
+        //for admin use only
         public void DeleteVideo(int VideoId)
         {
-            throw new NotImplementedException();
+            var vid = dbCtx.VideoLink.Where(o => o.VideoLinksId == VideoId).SingleOrDefault();
+            //delete if found
+            if (vid != null)
+            {
+                dbCtx.Remove(vid);
+                dbCtx.SaveChanges();
+            }
+
         }
 
         public List<Category> GetAllCategories()
@@ -60,19 +86,24 @@
             throw new NotImplementedException();
         }
 
+        //goes to the course page
         public Course GetCourse(int id)
         {
-            throw new NotImplementedException();
+            var course = dbCtx.Course.Where(o => o.CourseId == id).SingleOrDefault();
+            return course;
+    
         }
 
         public List<Course> GetCoursesByCategory(int CatId)
         {
-            throw new NotImplementedException();
+            var courses = dbCtx.Course.Where(o => o.CategoryId == CatId).ToList();
+            return courses;
         }
 
-        public List<Review> GetReviews()
+        public List<Review> GetReviews(int courseid)
         {
-            throw new NotImplementedException();
+            var reviews = dbCtx.Review.Where(o=>o.CourseId==courseid).ToList();
+            return reviews;
         }
 
         public Role GetRole(int UserId)
@@ -80,9 +111,16 @@
             throw new NotImplementedException();
         }
 
-        public List<VideoLinks> GetVideoLinksByCourseId(int CourseId)
+        public List<VideoLinks> GetVideoLinksByCourseId(int courseid)
         {
-            throw new NotImplementedException();
+            var videos = dbCtx.VideoLink.Where(o => o.CourseId == courseid).ToList();
+            return videos;
+        }
+
+        public void AddUser(User user)
+        {
+            dbCtx.User.Add(user);
+            dbCtx.SaveChanges();
         }
     }
 }
