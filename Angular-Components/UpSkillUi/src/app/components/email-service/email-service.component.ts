@@ -14,7 +14,7 @@ export default class ContactUsComponent {
     emailjs.sendForm('service_udohivq', 'template_39hmfwo', e.target as HTMLFormElement, 'Wo7-QvsdsemwcnELH')
       .then((result: EmailJSResponseStatus) => {
         console.log(result.text);
-      }, (error) => {
+      }, (error: { text: any; }) => {
         console.log(error.text);
       });
   }

@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import  EmailServiceComponent  from './components/email-service/email-service.component';
+import { FooterComponent } from './components/footer/footer.component';
 import { ProfileComponent } from './components/profile/profile.component';
 
 @NgModule({
@@ -11,6 +12,7 @@ import { ProfileComponent } from './components/profile/profile.component';
     AppComponent,
     EmailServiceComponent,
     ProfileComponent,
+    FooterComponent,
     
   ],
   imports: [
