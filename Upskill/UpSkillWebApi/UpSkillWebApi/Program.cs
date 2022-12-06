@@ -19,8 +19,9 @@ namespace UpSkillWebApi
             //configure DAO for dependency injection
             builder.Services.Add(new ServiceDescriptor(typeof(IDatabase), typeof(UpSkillEFDAO), ServiceLifetime.Transient));
 
+
             //configure dbcontext for using SqlServer
-            builder.Services.AddDbContext<UpSkillDbContext>(options => { options.UseSqlServer("Data Source=.;Initial Catalog=UpSkillDB2;Integrated Security=True;Pooling=False;Encrypt=False"); });
+            builder.Services.AddDbContext<UpSkillDbContext>(options => { options.UseSqlServer("Data Source=.\\sqlexpress;Initial Catalog=testdb;Integrated Security=True;Pooling=False;Encrypt=False"); });
 
             var app = builder.Build();
 

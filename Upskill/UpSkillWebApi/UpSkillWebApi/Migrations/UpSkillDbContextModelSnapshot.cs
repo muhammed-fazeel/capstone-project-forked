@@ -226,13 +226,11 @@ namespace UpSkillWebApi.Migrations
 
             modelBuilder.Entity("UpSkillWebApi.Models.Course", b =>
                 {
-                    b.HasOne("UpSkillWebApi.Models.Category", "Category")
+                    b.HasOne("UpSkillWebApi.Models.Category", null)
                         .WithMany("Course")
                         .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.Navigation("Category");
                 });
 
             modelBuilder.Entity("UpSkillWebApi.Models.EnrolledCourses", b =>
