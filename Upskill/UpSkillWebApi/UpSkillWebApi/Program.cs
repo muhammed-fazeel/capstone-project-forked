@@ -24,9 +24,13 @@ namespace UpSkillWebApi
 
 
             //configure dbcontext for using SqlServer
+<<<<<<< HEAD
             builder.Services.AddDbContext<UpSkillDbContext>(options => { options.UseSqlServer("Data Source=.\\sqlexpress;Initial Catalog=testdb;Integrated Security=True;Pooling=False;Encrypt=False"); });
             //dhruv's connection string don't delete it 
             //builder.Services.AddDbContext<UpSkillDbContext>(options => { options.UseSqlServer("Data Source=.\\sqlexpress;Initial Catalog=testdb;Integrated Security=True;Pooling=False;Encrypt=False"); });
+=======
+            builder.Services.AddDbContext<UpSkillDbContext>(options => { options.UseSqlServer("Data Source=.;Initial Catalog=UpSkillDB2;Integrated Security=True;Encrypt=False"); });
+>>>>>>> 3110f6dbd714d9282b2726b9be23b81f7aeab931
 
 
             //enable CORS policy
