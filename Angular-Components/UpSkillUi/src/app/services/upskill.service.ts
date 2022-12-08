@@ -3,13 +3,16 @@ import { Router } from '@angular/router';
 import {HttpClient} from '@angular/common/http'
 import { Category } from '../models/Category';
 import { Observable } from 'rxjs/internal/Observable';
+import { Course } from '../models/Course';
+import { map } from 'rxjs';
+import { User } from '../models/User';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UpskillService {
 
-  baseUrl:string="http://localhost:7285/api/UpSkill/";
+  baseUrl:string="https://localhost:7285/api/UpSkill/";
   constructor(private http:HttpClient,private router:Router) { }
 
   //calls for categories
@@ -20,7 +23,7 @@ export class UpskillService {
   //calls for courses
 
   getAllCourses():Observable<Course[]>{
-    return this.http.get<Course>(this.baseUrl+"Get")
+    return this.http.get<Course[]>(this.baseUrl+"Get")
   }
 
   //calls for videolinks
@@ -32,6 +35,9 @@ export class UpskillService {
   //calls for Role
 
   //calls for User
+  getUser():Observable<User>{
+    return this.http.get<User>(this.baseUrl+"")
+  }
 
 
   

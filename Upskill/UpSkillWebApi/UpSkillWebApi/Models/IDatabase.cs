@@ -35,6 +35,9 @@
         //calls for Users- this will used for authentication
         public void AddUser(User user);
 
+        public User GetUserByEmail(string email);   
+
+
         // to-do add the functions here
 
 

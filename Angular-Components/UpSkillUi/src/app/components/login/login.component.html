@@ -1,0 +1,10 @@
+<form *ngIf="formGrp" [formGroup]="formGrp" (ngSubmit)="loginSubmit(formGrp.value)">
+    <p class=""error-message></p>    
+    Username:<input formControlName="userName" name="userName" type="text" class="username"/>
+    Email:<input formControlName="email" name="email" type="text" class="email"/>
+
+    Password:<input formControlName="password" name="password" type="text" class="password"/>
+    Role:<input formControlName="roleId" name="roleId" type="text" class="roleId"/>
+  
+    <input type="submit" value="Submit"  />
+</form>

@@ -178,7 +178,6 @@ namespace UpSkillWebApi.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PictureUrl")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("RoleId")
@@ -259,13 +258,11 @@ namespace UpSkillWebApi.Migrations
 
             modelBuilder.Entity("UpSkillWebApi.Models.User", b =>
                 {
-                    b.HasOne("UpSkillWebApi.Models.Role", "Role")
+                    b.HasOne("UpSkillWebApi.Models.Role", null)
                         .WithMany("Users")
                         .HasForeignKey("RoleId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.Navigation("Role");
                 });
 
             modelBuilder.Entity("UpSkillWebApi.Models.VideoLinks", b =>

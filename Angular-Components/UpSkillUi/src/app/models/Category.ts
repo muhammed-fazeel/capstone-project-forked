@@ -1,12 +1,12 @@
 import { Component } from "@angular/core";
 
 export class Category{
-    CategoryId:number;
-    CategoryName:string
-    ImageUrl:string
-    constructor(CategoryId:number,CategoryName:string,ImageUrl:string){
-        this.CategoryId=CategoryId;
-        this.CategoryName=CategoryName;
-        this.ImageUrl=ImageUrl;
+    categoryId:number;
+    categoryName:string
+    imageUrl:string
+    constructor(categoryId:number,categoryName:string,imageUrl:string){
+        this.categoryId=categoryId;
+        this.categoryName=categoryName;
+        this.imageUrl=imageUrl;
     }
 }

@@ -1,4 +1,7 @@
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 using UpSkillWebApi.Models;
 
 namespace UpSkillWebApi
@@ -22,7 +25,36 @@ namespace UpSkillWebApi
 
             //configure dbcontext for using SqlServer
             builder.Services.AddDbContext<UpSkillDbContext>(options => { options.UseSqlServer("Data Source=.\\sqlexpress;Initial Catalog=testdb;Integrated Security=True;Pooling=False;Encrypt=False"); });
+            //dhruv's connection string don't delete it 
+            //builder.Services.AddDbContext<UpSkillDbContext>(options => { options.UseSqlServer("Data Source=.\\sqlexpress;Initial Catalog=testdb;Integrated Security=True;Pooling=False;Encrypt=False"); });
 
+
+            //enable CORS policy
+            builder.Services.AddCors(options => { options.AddPolicy("clients-allowed", policy => policy.WithOrigins("http://localhost:4200").AllowAnyHeader().AllowAnyMethod()); });
+
+
+            //enable jwt-bearer authentication 
+            builder.Services.AddAuthentication(opt =>
+            {
+                opt.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                opt.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            })
+                .AddJwtBearer(options =>
+                {
+                    options.TokenValidationParameters = new TokenValidationParameters
+                    {
+                        ValidateIssuer = true,
+                        ValidateAudience = true,
+                        ValidateLifetime = true,
+                        ValidateIssuerSigningKey = true,
+                        ValidIssuer = "ramnath",//ConfigurationManager.AppSetting["JWT:ValidIssuer"],
+                        ValidAudience = "ramnath",// ConfigurationManager.AppSetting["JWT:ValidAudience"],
+                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("ByYM000OLlMQG6VVVp1OH7Xzyr7gHuw1qvUC5dcGt3SNM"/*ConfigurationManager.AppSetting["JWT:Secret"]*/))
+                    };
+                });
+
+
+            //build
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -34,8 +66,11 @@ namespace UpSkillWebApi
 
             app.UseHttpsRedirection();
 
+            app.UseCors("clients-allowed");
+
             app.UseAuthorization();
 
+            app.UseAuthentication();
 
             app.MapControllers();
 

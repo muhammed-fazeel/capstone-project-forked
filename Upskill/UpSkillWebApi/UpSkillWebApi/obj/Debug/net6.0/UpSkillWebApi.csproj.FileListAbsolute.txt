@@ -244,3 +244,4 @@ C:\Users\muhamed.faseel\OneDrive - Happiest Minds Technologies Limited\Desktop\c
 C:\Users\muhamed.faseel\OneDrive - Happiest Minds Technologies Limited\Desktop\capstone_project\capstone-project\Upskill\UpSkillWebApi\UpSkillWebApi\obj\Debug\net6.0\UpSkillWebApi.csproj.CopyComplete
 C:\Users\muhamed.faseel\OneDrive - Happiest Minds Technologies Limited\Desktop\capstone_project\capstone-project\Upskill\UpSkillWebApi\UpSkillWebApi\obj\Debug\net6.0\UpSkillWebApi.genruntimeconfig.cache
 C:\Users\muhamed.faseel\OneDrive - Happiest Minds Technologies Limited\Desktop\capstone_project\capstone-project\Upskill\UpSkillWebApi\UpSkillWebApi\obj\Debug\net6.0\ref\UpSkillWebApi.dll
+C:\Users\dhruv.kanthaliya\Documents\capstone-project\Upskill\UpSkillWebApi\UpSkillWebApi\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

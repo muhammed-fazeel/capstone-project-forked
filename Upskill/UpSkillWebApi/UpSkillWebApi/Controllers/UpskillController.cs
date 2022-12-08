@@ -7,7 +7,7 @@ namespace UpSkillWebApi.Controllers
 {
 
     [Route("api/[controller]")]
-    [ApiController]
+    [ApiController] 
     public class UpSkillController : ControllerBase
     {
         private readonly IDatabase dal;
@@ -18,7 +18,7 @@ namespace UpSkillWebApi.Controllers
         // GET: api/<Controller>
         [HttpGet]
         [Route("GetAllCategories")]
-        public IEnumerable<Category> GetAllCategories()
+        public List<Category> GetAllCategories()
         {
             return dal.GetAllCategories();
         }

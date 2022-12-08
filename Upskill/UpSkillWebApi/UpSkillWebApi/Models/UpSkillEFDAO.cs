@@ -122,5 +122,11 @@ namespace UpSkillWebApi.Models
             dbCtx.User.Add(user);
             dbCtx.SaveChanges();
         }
+
+        public User GetUserByEmail(string email)
+        {
+            var user = dbCtx.User.Where(o => o.Email == email).SingleOrDefault();
+            return user;
+        }
     }
 }
