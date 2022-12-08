@@ -1,4 +1,4 @@
-<form *ngIf="formGrp" [formGroup]="formGrp" (ngSubmit)="loginSubmit(formGrp.value)">
+<!-- <form *ngIf="formGrp" [formGroup]="formGrp" (ngSubmit)="loginSubmit(formGrp.value)">
     <p class=""error-message></p>    
     Username:<input formControlName="userName" name="userName" type="text" class="username"/>
     Email:<input formControlName="email" name="email" type="text" class="email"/>
@@ -7,4 +7,32 @@
     Role:<input formControlName="roleId" name="roleId" type="text" class="roleId"/>
   
     <input type="submit" value="Submit"  />
-</form>
+</form> -->
+
+
+<div class="loginBox"> <img class="user" src="https://i.ibb.co/yVGxFPR/2.png" height="100px" width="100px" />
+      
+    <h3>Sign in here</h3>
+    <form *ngIf="formGrp" [formGroup]="formGrp" (ngSubmit)="loginSubmit(formGrp.value)">
+        <div class="inputBox">
+        <input formControlName="userName" name="userName" type="text" class="username" /> 
+        <input formControlName="email" name="email" type="text" class="email"/> </div> 
+       
+        <!-- radio button -->
+
+     
+          <!-- end of radio button -->
+
+        <input type="submit" name="" value="Login" onClick={this.addUser} />
+    </form>
+    <a href="#">Forget Password<br /> </a>
+    <div class="text-center">
+        <!-- <p style={{ color: "#59238F" }}>Sign-Up </p> -->
+    </div>
+</div>
+
+<label class="switch switch-left-right">
+    <input class="switch-input" type="checkbox" />
+    <span class="switch-label" data-on="User" data-off="Admin"></span> 
+    <span class="switch-handle"></span> 
+</label>

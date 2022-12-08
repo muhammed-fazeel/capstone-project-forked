@@ -1,7 +1,6 @@
 import { Component } from "@angular/core";
 
 export class Review{
-<<<<<<< HEAD
     reviewId:number;
     courseId:number;
     author:string;
@@ -15,20 +14,6 @@ export class Review{
        this.date=date;
        this.rating=rating;
        this.description=description;
-=======
-    ReviewId:number;
-    CourseId:number;
-    Author:string;
-    Date:Date;
-    Rating:number;
-    Description:string;
-    constructor(ReviewId:number,CourseId:number,Author:string,Date:Date,Rating:number,Description:string){
-       this.ReviewId=ReviewId;
-       this.CourseId=CourseId;
-       this.Author=Author;
-       this.Date=Date;
-       this.Rating=Rating;
-       this.Description=Description;
->>>>>>> 3110f6dbd714d9282b2726b9be23b81f7aeab931
+
     }
 }
