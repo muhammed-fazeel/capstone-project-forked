@@ -5,7 +5,7 @@ import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
 @Component({
   selector: 'app-email-service',
   templateUrl: './email-service.component.html',
-  styleUrls: []
+  styleUrls: ['./email-service.component.css']
 })
 export default class ContactUsComponent {
 
