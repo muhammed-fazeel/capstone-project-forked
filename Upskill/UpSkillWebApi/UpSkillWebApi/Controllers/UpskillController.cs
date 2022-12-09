@@ -122,6 +122,13 @@ namespace UpSkillWebApi.Controllers
             dal.AddUser(user);
         }
 
+        [HttpGet]
+        [Route("GetUserByEmail")]
+        public User GetUserByEmail(string email)
+        {
+            return dal.GetUserByEmail(email);
+        }
+
 
 
 

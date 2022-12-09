@@ -26,6 +26,12 @@ export class UpskillService {
     return this.http.get<Course[]>(this.baseUrl+"Get")
   }
 
+  getUserByEmail():Observable<User>{
+    //edit here please :)
+    var email=localStorage.getItem("email");
+    return this.http.get<User>(this.baseUrl+"GetUserByEmail?email="+email);
+  }
+
   //calls for videolinks
 
   //calls for enrolledCourses

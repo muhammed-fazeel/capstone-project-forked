@@ -11,18 +11,25 @@ import { LoginComponent } from './components/login/login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Route, RouterModule, Routes } from '@angular/router';
 import { RouteGuard } from './route-guard';
+import { HeaderComponent } from './components/header/header.component';
+import { BaseComponent } from './components/base/base.component';
 
 
 const routes: Routes=[
   {
     path:"home",
-    component:FooterComponent,
+    component:EmailServiceComponent,
     canActivate:[RouteGuard]
   },
   {
     path:"login",
     component:LoginComponent,
     
+  },
+
+  {
+    path:"profile",
+    component:ProfileComponent
   }
 ]
 @NgModule({
@@ -32,6 +39,8 @@ const routes: Routes=[
     EmailServiceComponent,
     ProfileComponent,
     LoginComponent,
+    HeaderComponent,
+    BaseComponent,
     
   ],
   imports: [

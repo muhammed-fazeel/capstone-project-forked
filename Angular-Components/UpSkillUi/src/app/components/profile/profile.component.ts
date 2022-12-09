@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { map } from 'rxjs';
 import { Category } from 'src/app/models/Category';
+import { User } from 'src/app/models/User';
 import { UpskillService } from 'src/app/services/upskill.service';
 
 @Component({
@@ -17,6 +18,9 @@ x:Category[]=[
   
 ];
 
+user:User=new User(1,1,"default","default","default","blah");
+
+
   categoriesLst?:Category[];
   constructor(private upskillService:UpskillService) { }
 
@@ -30,7 +34,15 @@ x:Category[]=[
         console.log(data);
         console.log(this.categoriesLst);
     })  
+
+    this.upskillService.getUserByEmail().subscribe(data=>{
+      this.user.email=data.email;
+      this.user.pictureUrl=data.pictureUrl;
+      this.user.roleId=data.roleId;
+      this.user.userName=data.userName})
   }
+
+  
 
   // mappingToCategory(data:any[]):Category[]{
   //   const output = data.reduce(
