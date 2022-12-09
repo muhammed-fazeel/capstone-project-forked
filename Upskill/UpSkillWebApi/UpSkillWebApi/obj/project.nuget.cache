@@ -2,6 +2,7 @@
   "version": 2,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   "dgSpecHash": "zEvG/WEkiQWxbGDEu9d9Xx8Yb4S5AdZ0V6mad551OZsLp6D6hW66jDg9NASIcSIvvZr4AlE/CZIO8mYoPGSW4w==",
   "success": true,
   "projectFilePath": "C:\\Users\\dhruv.kanthaliya\\Documents\\capstone-project\\Upskill\\UpSkillWebApi\\UpSkillWebApi\\UpSkillWebApi.csproj",
@@ -82,15 +83,20 @@
     "C:\\Users\\dhruv.kanthaliya\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "C:\\Users\\dhruv.kanthaliya\\.nuget\\packages\\system.windows.extensions\\5.0.0\\system.windows.extensions.5.0.0.nupkg.sha512"
 =======
+=======
+>>>>>>> f78944666d894652b3390a0b9c9c5337a691ec33
   "dgSpecHash": "vkbKRpd1EjiQCfc/jEjpuwV5YUpKEJQlpM8bASR1NomRKCeMXHH86+4pWiywNQnWg1DSK+uY6hYGTL0xi+ub2g==",
   "success": true,
   "projectFilePath": "C:\\capstone-project\\Upskill\\UpSkillWebApi\\UpSkillWebApi\\UpSkillWebApi.csproj",
   "expectedPackageFiles": [
+<<<<<<< HEAD
 =======
   "dgSpecHash": "vkbKRpd1EjiQCfc/jEjpuwV5YUpKEJQlpM8bASR1NomRKCeMXHH86+4pWiywNQnWg1DSK+uY6hYGTL0xi+ub2g==",
   "success": true,
   "projectFilePath": "C:\\capstone-project\\Upskill\\UpSkillWebApi\\UpSkillWebApi\\UpSkillWebApi.csproj",
   "expectedPackageFiles": [
+>>>>>>> f78944666d894652b3390a0b9c9c5337a691ec33
+=======
 >>>>>>> f78944666d894652b3390a0b9c9c5337a691ec33
     "C:\\Users\\asutosh.patnaik\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\asutosh.patnaik\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
@@ -168,6 +174,9 @@
     "C:\\Users\\asutosh.patnaik\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "C:\\Users\\asutosh.patnaik\\.nuget\\packages\\system.windows.extensions\\5.0.0\\system.windows.extensions.5.0.0.nupkg.sha512"
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> f78944666d894652b3390a0b9c9c5337a691ec33
+=======
 >>>>>>> f78944666d894652b3390a0b9c9c5337a691ec33
 =======
 >>>>>>> f78944666d894652b3390a0b9c9c5337a691ec33

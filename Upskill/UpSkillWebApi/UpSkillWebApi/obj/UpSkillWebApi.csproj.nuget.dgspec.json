@@ -3,6 +3,7 @@
   "restore": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "C:\\Users\\dhruv.kanthaliya\\Documents\\capstone-project\\Upskill\\UpSkillWebApi\\UpSkillWebApi\\UpSkillWebApi.csproj": {}
   },
   "projects": {
@@ -17,6 +18,22 @@
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\dhruv.kanthaliya\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+    "C:\\capstone-project\\Upskill\\UpSkillWebApi\\UpSkillWebApi\\UpSkillWebApi.csproj": {}
+  },
+  "projects": {
+    "C:\\capstone-project\\Upskill\\UpSkillWebApi\\UpSkillWebApi\\UpSkillWebApi.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\capstone-project\\Upskill\\UpSkillWebApi\\UpSkillWebApi\\UpSkillWebApi.csproj",
+        "projectName": "UpSkillWebApi",
+        "projectPath": "C:\\capstone-project\\Upskill\\UpSkillWebApi\\UpSkillWebApi\\UpSkillWebApi.csproj",
+        "packagesPath": "C:\\Users\\asutosh.patnaik\\.nuget\\packages\\",
+        "outputPath": "C:\\capstone-project\\Upskill\\UpSkillWebApi\\UpSkillWebApi\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\asutosh.patnaik\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> f78944666d894652b3390a0b9c9c5337a691ec33
 =======
     "C:\\capstone-project\\Upskill\\UpSkillWebApi\\UpSkillWebApi\\UpSkillWebApi.csproj": {}
   },
