@@ -1,4 +1,4 @@
-<form *ngIf="formGrp" [formGroup]="formGrp" (ngSubmit)="loginSubmit(formGrp.value)">
+<!-- <form *ngIf="formGrp" [formGroup]="formGrp" (ngSubmit)="loginSubmit(formGrp.value)">
     <p class="" error-message></p>
     <div>Username:<input formControlName="userName" name="userName" type="text" class="username" /></div>
     <div>Email:<input formControlName="email" name="email" type="text" class="email" /></div>
@@ -12,32 +12,46 @@
   
     <input type="submit" value="Submit"  />
 </form>
+ -->
 
 
-<!-- <div class="loginBox"> <img class="user" src="https://i.ibb.co/yVGxFPR/2.png" height="100px" width="100px" />
-      
-    <h3>Sign in here</h3>
-    <form *ngIf="formGrp" [formGroup]="formGrp" (ngSubmit)="loginSubmit(formGrp.value)">
-        <div class="inputBox">
-        <input formControlName="userName" name="userName" type="text" class="username" /> 
-        <input formControlName="email" name="email" type="text" class="email"/> </div> 
-       
-         radio button
 
-     
-          end of radio button
-
-        <input type="submit" name="" value="Login" onClick={this.addUser} />
-    </form>
-    <a href="#">Forget Password<br /> </a>
-    <div class="text-center">
-        <p style={{ color: "#59238F" }}>Sign-Up </p>
+ <div class="container-everything">
+    <div class="container">
+      <div class="box">
+        <form>
+          <div class="row row1">
+            <div class="col-md">
+            <div class="row">
+              <div class="col-md"><img src="./assets/bar-chart.svg" alt=""></div>
+              <div class="col-md"><h1>UpSkill</h1></div>
+            </div>
+              </div>
+            <div class="col-md radio-buttons">
+              <div class="wrapper">
+                <input type="radio" name="select" id="option-1" checked>
+                <input type="radio" name="select" id="option-2">
+                  <label for="option-1" class="option option-1"><span class="role">User</span></label>
+                  <label for="option-2" class="option option-2"><span class="role">Admin</span></label>
+               </div>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+            <div class="col-sm-10">
+              <input type="text"  class="form-control" id="staticEmail" value="email@example.com">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+            <div class="col-sm-10">
+              <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+            </div>
+          </div>
+          <button class="btn btn-primary">Log In</button>
+          <button class="btn btn-primary">Sign Up</button>
+        </form>
+      </div>
     </div>
-</div>
-
-<label class="switch switch-left-right">
-    <input class="switch-input" type="checkbox" />
-    <span class="switch-label" data-on="User" data-off="Admin"></span> 
-    <span class="switch-handle"></span> 
-</label>  -->
-
+    
+  </div>

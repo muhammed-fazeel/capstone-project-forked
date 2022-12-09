@@ -13,6 +13,7 @@ import { Route, RouterModule, Routes } from '@angular/router';
 import { RouteGuard } from './route-guard';
 import { HeaderComponent } from './components/header/header.component';
 import { BaseComponent } from './components/base/base.component';
+import { AllCategoriesComponent } from './components/all-categories/all-categories.component';
 
 
 const routes: Routes=[
@@ -41,6 +42,7 @@ const routes: Routes=[
     LoginComponent,
     HeaderComponent,
     BaseComponent,
+    AllCategoriesComponent,
     
   ],
   imports: [

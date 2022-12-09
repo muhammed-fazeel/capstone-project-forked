@@ -28,12 +28,12 @@ user:User=new User(1,1,"default","default","default","blah");
 
     console.log(this.x);
 
-    this.upskillService.getAllCategories()
-    .subscribe(data=>{
-        this.categoriesLst=data;
-        console.log(data);
-        console.log(this.categoriesLst);
-    })  
+    // this.upskillService.getAllCategories()
+    // .subscribe(data=>{
+    //     this.categoriesLst=data;
+    //     console.log(data);
+    //     console.log(this.categoriesLst);
+    // })  
 
     this.upskillService.getUserByEmail().subscribe(data=>{
       this.user.email=data.email;

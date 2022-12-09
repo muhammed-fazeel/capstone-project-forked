@@ -1,152 +1,126 @@
-body {
-    /* background-image: url('../public/gradient1.svg'); */
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
+.container-everything{
+    /* background-color: #222222; */
+    margin: 0%;
+}
+.container {
+    /* padding: 3rem; */
+    margin-left: auto;
+    margin-top: auto;
+    display: grid;
+    place-items: center;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+.box{
+
+}
+.logo{
+    width: 30px;
+}
+.form-control{
+    /* width: 40%; */
+}
+.form-group{
+    padding: 1rem;;
+}
+.col-form-label{
+    padding-right: 5rem;
+}
+h1{
+    /* margin-left: 5rem;  */
+}
+.row1{
+    padding: 2rem;;
+}
+.btn{
+    width: 50%;
+    margin-left: 4rem;
+    margin-top: 1rem;
 }
 
-@media screen and (max-width: 600px ) {
-    body {
-        background-size: cover;
-        /* : fixed */
-    }
+/* radio button */
+.radio-buttons{
+    display: grid;
+    height: 100%;
+    place-items: center;
+    background: white;
+    font-family: 'Lato', sans-serif;
+}
+/* .wrapper{
+  display: inline-flex;
+  background: #fff;
+  height: 100px;
+  width: 300px;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 5px;
+  padding: 20px 15px;
+  box-shadow: 5px 5px 30px rgba(0,0,0,0.2);
+} */
+.wrapper .option{
+  background: #fff;
+  height: 80%;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 0 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 0 10px;
+  border: 2px solid lightgrey;
+  transition: all 0.3s ease;
+}
+.role{
+    font-size: small;
+}
+.btn{
+    background-color: #22A39F;
+    border: #22A39F;
 }
 
-#particles-js {
-    height: 100%
+input[type="radio"]{
+  display: none;
+}
+#option-1:checked:checked ~ .option-1,
+#option-2:checked:checked ~ .option-2{
+  border-color: #22A39F;
+  background: #22A39F;
+}
+#option-1:checked:checked ~ .option-1 .dot,
+#option-2:checked:checked ~ .option-2 .dot{
+  background: #fff;
+}
+#option-1:checked:checked ~ .option-1 .dot::before,
+#option-2:checked:checked ~ .option-2 .dot::before{
+  opacity: 1;
+  transform: scale(1);
+}
+.wrapper .option span{
+  font-size: 15px;
+  color: #808080;
+}
+#option-1:checked:checked ~ .option-1 span,
+#option-2:checked:checked ~ .option-2 span{
+  color: #fff;
 }
 
-.loginBox {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 300px;
-    min-height: 200px;
-    background: #000000;
-    border-radius: 10px;
-    padding: 40px;
-    box-sizing: border-box;
-    /* box-shadow: 2px 2px 50px black; */
-}
 
-.user {
-    margin: 0 auto;
-    display: block;
-    margin-bottom: 20px
-}
 
-h3 {
-    margin: 0;
-    padding: 0 0 20px;
-    color: #59238F;
-    text-align: center
-}
 
-.loginBox input {
-    width: 100%;
-    margin-bottom: 20px
-}
 
-.loginBox input[type="text"],
-.loginBox input[type="password"] {
-    border: none;
-    border-bottom: 2px solid #262626;
-    outline: none;
-    height: 40px;
-    color: #fff;
-    background: transparent;
-    font-size: 16px;
-    padding-left: 20px;
-    box-sizing: border-box
-}
 
-.loginBox input[type="text"]:hover,
-.loginBox input[type="password"]:hover {
-    color: #42F3FA;
-    border: 1px solid #42F3FA;
-    box-shadow: 0 0 5px rgba(0, 255, 0, .3), 0 0 10px rgba(0, 255, 0, .2), 0 0 15px rgba(0, 255, 0, .1), 0 2px 0 black
-}
 
-.loginBox input[type="text"]:focus,
-.loginBox input[type="password"]:focus {
-    border-bottom: 2px solid #42F3FA
-}
 
-.inputBox {
-    position: relative
-}
 
-.inputBox span {
-    position: absolute;
-    top: 10px;
-    color: #262626
-}
 
-.loginBox input[type="submit"] {
-    border: none;
-    outline: none;
-    height: 40px;
-    font-size: 16px;
-    background: #59238F;
-    color: #fff;
-    border-radius: 20px;
-    cursor: pointer
-}
 
-.loginBox a {
-    color: #262626;
-    font-size: 14px;
-    font-weight: bold;
-    text-decoration: none;
-    text-align: center;
-    display: block
-}
 
-a:hover {
-    color: #00ffff
-}
 
-p {
-    color: #0000ff
-}
 
-.ignore-css{
-    all:unset;
-}
 
-/* toggle button  */
-.switch-flat {
-	padding: 0;
-	background: #FFF;
-	background-image: none;
-}
-.switch-flat .switch-label {
-	background: #FFF;
-	border: solid 2px #eceeef;
-	box-shadow: none;
-}
-.switch-flat .switch-label:after {
-	color: #0088cc;
-}
-.switch-flat .switch-handle {
-	top: 6px;
-	left: 6px;
-	background: #dadada;
-	width: 22px;
-	height: 22px;
-	box-shadow: none;
-}
-.switch-flat .switch-handle:before {
-	background: #eceeef;
-}
-.switch-flat .switch-input:checked ~ .switch-label {
-	background: #FFF;
-	border-color: #0088cc;
-}
-.switch-flat .switch-input:checked ~ .switch-handle {
-	left: 72px;
-	background: #0088cc;
-	box-shadow: none;
-}
+
+
+
+
