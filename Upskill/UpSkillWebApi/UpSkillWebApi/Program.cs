@@ -27,9 +27,15 @@ namespace UpSkillWebApi
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             /*            builder.Services.AddDbContext<UpSkillDbContext>(options => { options.UseSqlServer("Data Source=.\\sqlexpress;Initial Catalog=testdb;Integrated Security=True;Encrypt=False"); });
             */            //dhruv's connection string don't delete it 
             builder.Services.AddDbContext<UpSkillDbContext>(options => { options.UseSqlServer("Data Source=.\\sqlexpress;Initial Catalog=testdb;Integrated Security=True;Pooling=False;Encrypt=False"); });
+=======
+            builder.Services.AddDbContext<UpSkillDbContext>(options => { options.UseSqlServer("Data Source=.\\sqlexpress;Initial Catalog=testdb;Integrated Security=True;Encrypt=False"); });
+            //dhruv's connection string don't delete it 
+            //builder.Services.AddDbContext<UpSkillDbContext>(options => { options.UseSqlServer("Data Source=.\\sqlexpress;Initial Catalog=testdb;Integrated Security=True;Pooling=False;Encrypt=False"); });
+>>>>>>> f78944666d894652b3390a0b9c9c5337a691ec33
 =======
             builder.Services.AddDbContext<UpSkillDbContext>(options => { options.UseSqlServer("Data Source=.\\sqlexpress;Initial Catalog=testdb;Integrated Security=True;Encrypt=False"); });
             //dhruv's connection string don't delete it 
