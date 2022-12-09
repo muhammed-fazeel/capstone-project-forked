@@ -3758,11 +3758,16 @@
     ]
   },
   "packageFolders": {
+<<<<<<< HEAD
     "C:\\Users\\dhruv.kanthaliya\\.nuget\\packages\\": {}
+=======
+    "C:\\Users\\asutosh.patnaik\\.nuget\\packages\\": {}
+>>>>>>> f78944666d894652b3390a0b9c9c5337a691ec33
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\dhruv.kanthaliya\\Documents\\capstone-project\\Upskill\\UpSkillWebApi\\UpSkillWebApi\\UpSkillWebApi.csproj",
       "projectName": "UpSkillWebApi",
       "projectPath": "C:\\Users\\dhruv.kanthaliya\\Documents\\capstone-project\\Upskill\\UpSkillWebApi\\UpSkillWebApi\\UpSkillWebApi.csproj",
@@ -3771,6 +3776,16 @@
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\dhruv.kanthaliya\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+      "projectUniqueName": "C:\\capstone-project\\Upskill\\UpSkillWebApi\\UpSkillWebApi\\UpSkillWebApi.csproj",
+      "projectName": "UpSkillWebApi",
+      "projectPath": "C:\\capstone-project\\Upskill\\UpSkillWebApi\\UpSkillWebApi\\UpSkillWebApi.csproj",
+      "packagesPath": "C:\\Users\\asutosh.patnaik\\.nuget\\packages\\",
+      "outputPath": "C:\\capstone-project\\Upskill\\UpSkillWebApi\\UpSkillWebApi\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\asutosh.patnaik\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> f78944666d894652b3390a0b9c9c5337a691ec33
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3841,5 +3856,13 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.403\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\capstone-project\\Upskill\\UpSkillWebApi\\UpSkillWebApi\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

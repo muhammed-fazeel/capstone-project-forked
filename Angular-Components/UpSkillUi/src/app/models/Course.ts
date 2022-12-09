@@ -22,6 +22,9 @@ export class Course{
         this.noOfLectures=noOfLectures;
         this.thumbnailUrl=thumbnailUrl;
         this.description=description;
+<<<<<<< HEAD
 
+=======
+>>>>>>> f78944666d894652b3390a0b9c9c5337a691ec33
     }
 }
