@@ -45,10 +45,10 @@ namespace UpSkillWebApi.Controllers
         }
 
         [HttpGet]
-        [Route("GetCoursesByCategoryId/{CatIid:int}")]
-        public List<Course> GetCoursesByCategory(int CatId)
+        [Route("GetCoursesByCategoryId/{id:int}")]
+        public List<Course> GetCoursesByCategory(int id)
         {
-            return dal.GetCoursesByCategory(CatId);
+            return dal.GetCoursesByCategory(id);
         }
 
         //Category

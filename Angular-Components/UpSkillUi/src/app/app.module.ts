@@ -14,6 +14,7 @@ import { RouteGuard } from './route-guard';
 import { HeaderComponent } from './components/header/header.component';
 import { BaseComponent } from './components/base/base.component';
 import { AllCategoriesComponent } from './components/all-categories/all-categories.component';
+import { HomeComponent } from './components/home/home.component';
 
 
 const routes: Routes=[
@@ -30,7 +31,8 @@ const routes: Routes=[
 
   {
     path:"profile",
-    component:ProfileComponent
+    component:ProfileComponent,
+    canActivate:[RouteGuard]
   }
 ]
 @NgModule({
@@ -43,8 +45,10 @@ const routes: Routes=[
     HeaderComponent,
     BaseComponent,
     AllCategoriesComponent,
+    HomeComponent,
     
   ],
+
   imports: [
     BrowserModule,
     AppRoutingModule,

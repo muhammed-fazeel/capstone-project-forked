@@ -137,6 +137,6 @@ p {
 
 img{
     width:auto;
-    height: 100px;
+    height: auto;
     border-radius: 100%;
 }
