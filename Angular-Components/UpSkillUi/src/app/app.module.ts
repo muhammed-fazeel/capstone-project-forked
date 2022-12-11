@@ -15,9 +15,15 @@ import { HeaderComponent } from './components/header/header.component';
 import { BaseComponent } from './components/base/base.component';
 import { AllCategoriesComponent } from './components/all-categories/all-categories.component';
 import { HomeComponent } from './components/home/home.component';
+import { AddVideoComponent } from './components/add-video/add-video.component';
 
 
 const routes: Routes=[
+  {
+    path:"",
+    component:BaseComponent,
+
+  },
   {
     path:"home",
     component:EmailServiceComponent,
@@ -33,6 +39,12 @@ const routes: Routes=[
     path:"profile",
     component:ProfileComponent,
     canActivate:[RouteGuard]
+  },
+
+  {
+    path:"add-video",
+    component:AddVideoComponent,
+    canActivate:[RouteGuard]
   }
 ]
 @NgModule({
@@ -46,6 +58,7 @@ const routes: Routes=[
     BaseComponent,
     AllCategoriesComponent,
     HomeComponent,
+    AddVideoComponent,
     
   ],
 

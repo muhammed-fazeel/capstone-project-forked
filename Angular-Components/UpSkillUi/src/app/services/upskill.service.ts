@@ -6,6 +6,7 @@ import { Observable } from 'rxjs/internal/Observable';
 import { Course } from '../models/Course';
 import { map } from 'rxjs';
 import { User } from '../models/User';
+import { VideoLinks } from '../models/VideoLinks';
 
 @Injectable({
   providedIn: 'root'
@@ -30,6 +31,10 @@ export class UpskillService {
     //edit here please :)
     var email=localStorage.getItem("email");
     return this.http.get<User>(this.baseUrl+"GetUserByEmail?email="+email);
+  }
+
+  addVideoToCourse(video:VideoLinks):Observable<VideoLinks>{
+        return this.http.post<VideoLinks>(this.baseUrl+"AddVideo",video)
   }
 
   //calls for videolinks

@@ -1,13 +1,12 @@
 import { Component } from "@angular/core";
 
 export class VideoLinks {
-    videoLinksId:number;
+    videoLinksId?:number;
     courseId:number;
     url:string
     duration:number;
     title:string;
-    constructor(videoLinksId:number,courseId:number,url:string,duration:number,title:string){
-        this.videoLinksId=videoLinksId;
+    constructor(courseId:number,url:string,duration:number,title:string){
         this.courseId=courseId;
         this.url=url;
         this.duration=duration;

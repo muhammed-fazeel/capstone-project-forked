@@ -1,0 +1,34 @@
+{{video|json}}
+
+<!-- add validation here -->
+<!-- courseId should be dropdown of mentor's previous courses -->
+<form #f1="ngForm" action="" class="form">
+    <div class="form-group">
+        <!-- two way binding here man -->
+        <label for="courseId">CourseId</label>
+        <input #courseId="ngModel" name="courseId" [(ngModel)]="video.courseId"/>
+    </div>
+
+    <div class="form-group">
+        <!-- two way binding here man -->
+        <label for="url">Link of the Video</label>
+        <input #courseId="ngModel" name="url" [(ngModel)]="video.url"/>
+    </div>
+
+    <div class="form-group">
+        <!-- two way binding here man -->
+        <label for="duration">Duration of the Course(hrs)</label>
+        <input #courseId="ngModel" name="duration" [(ngModel)]="video.duration"/>
+    </div>
+
+    <div class="form-group">
+        <!-- two way binding here man -->
+        <label for="title">Title</label>
+        <input #courseId="ngModel" name="title" [(ngModel)]="video.title"/>
+    </div>
+
+    <div>
+        <button (click)="addVideo()" class="btn btn-primary">Add Video</button>
+    </div>
+
+</form>
