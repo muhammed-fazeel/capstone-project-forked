@@ -24,11 +24,7 @@ const routes: Routes=[
     component:BaseComponent,
 
   },
-  {
-    path:"home",
-    component:EmailServiceComponent,
-    canActivate:[RouteGuard]
-  },
+
   {
     path:"login",
     component:LoginComponent,

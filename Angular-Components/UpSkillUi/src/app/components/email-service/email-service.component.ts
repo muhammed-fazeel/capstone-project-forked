@@ -9,6 +9,7 @@ import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
 })
 export default class ContactUsComponent {
 
+
   public sendEmail(e: Event) {
     e.preventDefault();
     emailjs.sendForm('service_udohivq', 'template_39hmfwo', e.target as HTMLFormElement, 'Wo7-QvsdsemwcnELH')
@@ -18,4 +19,5 @@ export default class ContactUsComponent {
         console.log(error.text);
       });
   }
+
 }

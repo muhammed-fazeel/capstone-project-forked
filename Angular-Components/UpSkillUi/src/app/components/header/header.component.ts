@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  //fix this thing
+
+  logInFlag:boolean=false;
+
   constructor() { }
 
   ngOnInit(): void {
+    if (localStorage.getItem("email")?.length!=0){
+      this.logInFlag=true;
+    };
   }
 
 }
