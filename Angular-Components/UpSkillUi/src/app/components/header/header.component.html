@@ -42,6 +42,9 @@
       <button *ngIf="logInFlag" class="btn btn-outline-success" style="margin: 1%;">
         <a class="nav-link" href="SignUp">SignUp</a>
       </button>
+      <button *ngIf="!logInFlag" class="btn btn-outline-success" style="margin: 1%;" (click)="logout()">
+        <a class="nav-link" href="LogOut">LogOut</a>
+      </button>
     </div>
   </div>
 </nav>
