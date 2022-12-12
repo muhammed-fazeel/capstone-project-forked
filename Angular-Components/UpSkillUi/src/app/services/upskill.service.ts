@@ -24,7 +24,8 @@ export class UpskillService {
   //calls for courses
 
   getAllCourses():Observable<Course[]>{
-    return this.http.get<Course[]>(this.baseUrl+"Get")
+    // console.log("request fired!");
+    return this.http.get<Course[]>(this.baseUrl+"GetAllCourses");
   }
 
   getUserByEmail():Observable<User>{
@@ -40,7 +41,11 @@ export class UpskillService {
   addUser(user:User):Observable<User>{
     return this.http.post<User>(this.baseUrl+"AddUser",user)
   }
-
+  getCourseById(courseId:number):Observable<Course>{
+    //edit here please :)
+    // var courseId=localStorage.getItem("courseId");
+    return this.http.get<Course>(this.baseUrl+"GetCourse/"+courseId);
+  }
   //calls for videolinks
 
   //calls for enrolledCourses

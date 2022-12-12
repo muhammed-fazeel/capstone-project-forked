@@ -17,6 +17,9 @@ import { AllCategoriesComponent } from './components/all-categories/all-categori
 import { HomeComponent } from './components/home/home.component';
 import { AddVideoComponent } from './components/add-video/add-video.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
+import { NextDirective } from './next.directive';
+import { PrevDirective } from './prev.directive';
+import { Slider2Component } from './components/slider2/slider2.component';
 
 
 const routes: Routes=[
@@ -62,7 +65,9 @@ const routes: Routes=[
     HomeComponent,
     AddVideoComponent,
     SignUpComponent,
-    
+    NextDirective,
+    PrevDirective,
+    Slider2Component
   ],
 
   imports: [
