@@ -37,6 +37,10 @@ export class UpskillService {
         return this.http.post<VideoLinks>(this.baseUrl+"AddVideo",video)
   }
 
+  addUser(user:User):Observable<User>{
+    return this.http.post<User>(this.baseUrl+"AddUser",user)
+  }
+
   //calls for videolinks
 
   //calls for enrolledCourses

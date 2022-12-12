@@ -1,14 +1,14 @@
 import { Component } from "@angular/core";
 
 export class User {
-    userId:number;
+    userId?:number;
     roleId:number;
     userName:string;
     password:string;
     email:string;
-    pictureUrl:string;
+    pictureUrl?:string;
     constructor(userId:number,roleId:number,userName:string,password:string,email:string,pictureUrl:string){
-       this.userId=userId;
+    //    this.userId=userId;
        this.roleId=roleId;
        this.userName=userName;
        this.password=password;
