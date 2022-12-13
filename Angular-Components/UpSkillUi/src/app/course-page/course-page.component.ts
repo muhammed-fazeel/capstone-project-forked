@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { VideoLinks } from '../models/VideoLinks';
 import { UpskillService } from '../services/upskill.service';
 
@@ -10,7 +11,8 @@ import { UpskillService } from '../services/upskill.service';
 export class CoursePageComponent implements OnInit {
   id:number=1;
   videolinks:VideoLinks[]=[];
-  constructor(private upskillservice:UpskillService) { }
+  present_video:SafeResourceUrl="https://www.youtube.com/watch?v=nOY0TWWvynU";
+  constructor(private upskillservice:UpskillService,public sanitizer:DomSanitizer) { }
 
   ngOnInit(): void {
     this.upskillservice.GetVideoLinksByCourseId(this.id).subscribe(data=>{
@@ -19,4 +21,12 @@ export class CoursePageComponent implements OnInit {
     })
   }
 
+  showVideo(v:VideoLinks){
+    this.present_video=this.sanitizer.bypassSecurityTrustResourceUrl(v.url);
+    console.log(this.present_video);
+
+  //   let ele = document.getElementById("video");
+  //   if(ele!=null){
+  //     ele.src=v.url;
+  }
 }
