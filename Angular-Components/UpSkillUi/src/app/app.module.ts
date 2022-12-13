@@ -20,6 +20,7 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { NextDirective } from './next.directive';
 import { PrevDirective } from './prev.directive';
 import { Slider2Component } from './components/slider2/slider2.component';
+import { CoursePageComponent } from './course-page/course-page.component';
 
 
 const routes: Routes=[
@@ -67,7 +68,8 @@ const routes: Routes=[
     SignUpComponent,
     NextDirective,
     PrevDirective,
-    Slider2Component
+    Slider2Component,
+    CoursePageComponent
   ],
 
   imports: [
