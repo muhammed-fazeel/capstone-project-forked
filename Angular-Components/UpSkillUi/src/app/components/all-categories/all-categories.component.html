@@ -1,11 +1,10 @@
-<div class="container">
-    <div class="row" *ngFor="let c of categoriesLst">
-      <button class="column" (click)="showCourses(c.categoryId)">
-        <div class="card" style="width: 18rem;">
-          <img class="card-img-top" src={{c.imageUrl}} alt="Card image cap" style="height: 200px;width: 230px;">
-          <div class="card-body">
-            <p class="card-text">{{c.categoryName}}</p>
-          </div>
-        </div>
-      </button>
+<div class="grid-container">
+  <button class="grid-item" *ngFor="let c of categoriesLst" (click)="showCourses(c.categoryId)">
+    <div class="card">
+      <img class="card-img-top" src={{c.imageUrl}} alt="Card image cap">
+      <div class="card-body">
+        <p class="card-text">{{c.categoryName}}</p>
+      </div>
     </div>
+  </button>
+</div>
