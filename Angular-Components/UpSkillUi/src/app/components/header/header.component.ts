@@ -20,10 +20,14 @@ export class HeaderComponent implements OnInit {
     else{
       this.logInFlag=false;
     }
+    // location.reload();
+    
   }
 
   logout(){
     localStorage.clear();
   }
+
+
 
 }
