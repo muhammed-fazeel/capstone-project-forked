@@ -20,7 +20,8 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { NextDirective } from './next.directive';
 import { PrevDirective } from './prev.directive';
 import { Slider2Component } from './components/slider2/slider2.component';
-import { CoursePageComponent } from './course-page/course-page.component';
+import { CoursePageComponent } from './components/course-page/course-page.component';
+import { FeaturesComponent } from './components/features/features.component';
 
 
 const routes: Routes=[
@@ -51,6 +52,10 @@ const routes: Routes=[
   {
     path:"sign-up",
     component:SignUpComponent
+  },
+  {
+    path:"home",
+    component:HomeComponent
   }
 ]
 @NgModule({
@@ -69,7 +74,8 @@ const routes: Routes=[
     NextDirective,
     PrevDirective,
     Slider2Component,
-    CoursePageComponent
+    CoursePageComponent,
+    FeaturesComponent
   ],
 
   imports: [

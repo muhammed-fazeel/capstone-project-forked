@@ -1,7 +1,31 @@
-html{
-    background-color: #00ffff;
+.container-main{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    /* background-color: #00ADB5;   */
+    background-image: url('./gradient1.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 
 }
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .clearfix {
+    display: inline-block;
+}
+
+html[xmlns] .clearfix {
+    display: block;
+}
+
+* html .clearfix {
+    height: 1%;
+}
+  
 .login-container {
     /* background-image: url('./assets/bar-chart-white.svg'); */
     background-color: #00ffff;
@@ -11,12 +35,12 @@ html{
     background-position: center;
 }
 
-@media screen and (max-width: 600px ) {
+/* @media screen and (max-width: 600px ) {
     body {
         background-size: cover;
         /* : fixed */
-    }
-}
+     /* } */
+ /* }  */ */
 
 #particles-js {
     height: 100%
@@ -24,22 +48,28 @@ html{
 
 .loginBox {
     position: absolute;
+    display: block;
+    /* margin-left: auto; */
+    /* margin-right: auto; */
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 300px;
-    min-height: 200px;
+    /* min-height: 200px; */
     background: #2a2828;
     border-radius: 10px;
     padding: 40px;
     box-sizing: border-box;
-    /* box-shadow: 2px 2px 50px black; */
+    color: white;
+    /* box-shadow: 2px 2px 40px #EEEEEE; */
 }
 
 .user {
     margin: 0 auto;
     display: block;
-    margin-bottom: 20px
+    margin-bottom: 20px;
+    /* width: 20%; */
+    
 }
 
 h3 {
@@ -129,4 +159,11 @@ p {
 }
 .btn{
     width: 5rem;
+}
+.login-text{
+    font-weight: 500;
+    font-size: 2rem;
+}
+.btn-sm{
+    border-color: #59238F;
 }

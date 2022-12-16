@@ -13,15 +13,16 @@ export class LoginComponent implements OnInit {
 
   formGrp: FormGroup;
 
-  userName = new FormControl();
+  userName=new FormControl;
   password = new FormControl();
   roleId=new FormControl();
   email=new FormControl();
   // pictureUrl=new FormControl();
   
   constructor(private authService: AuthenticationService) {
+
     this.formGrp = new FormGroup({
-      userName: this.userName,
+      userName:this.userName,
       email:this.email,
       password: this.password,
       roleId:this.roleId,

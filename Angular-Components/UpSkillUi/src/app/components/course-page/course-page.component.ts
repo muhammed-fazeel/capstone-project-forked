@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
-import { VideoLinks } from '../models/VideoLinks';
-import { UpskillService } from '../services/upskill.service';
+import { VideoLinks } from '../../models/VideoLinks';
+import { UpskillService } from '../../services/upskill.service';
 
 @Component({
   selector: 'app-course-page',
