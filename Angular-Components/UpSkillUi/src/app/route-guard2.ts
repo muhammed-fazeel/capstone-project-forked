@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class RouteGuard implements CanActivate {
+export class RouteGuard2 implements CanActivate {
   /**
    *
    */
@@ -16,12 +16,14 @@ export class RouteGuard implements CanActivate {
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
     
-    if(localStorage.getItem("token")!=null){
-      return true;
-    }else{
-      this.router.navigate(["/login"]);
+    //for mentor
+    if(localStorage.getItem("roleId")=="1"){
       return false;
     }
+
+    return true;
+    }
+
       
   }
 
@@ -44,4 +46,3 @@ export class RouteGuard implements CanActivate {
   //     }
 
     
-}

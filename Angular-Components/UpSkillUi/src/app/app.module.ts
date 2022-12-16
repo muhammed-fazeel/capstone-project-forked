@@ -23,7 +23,8 @@ import { Slider2Component } from './components/slider2/slider2.component';
 import { CourseListComponent } from './components/course-list/course-list.component';
 import { AddCourseComponent } from './components/add-course/add-course.component';
 import { CoursePageComponent } from './components/course-page/course-page.component';
-import { CartService } from './services/cart.service';
+import { RouteGuard2 } from './route-guard2';
+import { RouteGuard1 } from './route-guard1';
 import { CartComponent } from './components/cart/cart.component';
 
 
@@ -43,13 +44,13 @@ const routes: Routes=[
   {
     path:"profile",
     component:ProfileComponent,
-    canActivate:[RouteGuard]
+    canActivate:[RouteGuard,RouteGuard1]
   },
 
   {
     path:"add-video",
     component:AddVideoComponent,
-    canActivate:[RouteGuard]
+    canActivate:[RouteGuard,RouteGuard2]
   },
 
   {
@@ -67,11 +68,7 @@ const routes: Routes=[
   {
     path:"add-course",
     component:AddCourseComponent,
-    canActivate:[RouteGuard]
-  },
-  {
-    path:"cart",
-    component:CartComponent
+    canActivate:[RouteGuard,RouteGuard2],
   }
 ]
 @NgModule({

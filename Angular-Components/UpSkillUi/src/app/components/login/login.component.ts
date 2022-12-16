@@ -13,7 +13,7 @@ export class LoginComponent implements OnInit {
 
   formGrp: FormGroup;
 
-  userName=new FormControl;
+  userName=new FormControl("dhruvfrom");
   password = new FormControl();
   roleId=new FormControl();
   email=new FormControl();
@@ -34,6 +34,7 @@ export class LoginComponent implements OnInit {
   }
 
   loginSubmit(user:User) { 
-    this.authService.authenticateUser(user);     
+    this.authService.authenticateUser(user); 
+        
   }
 }

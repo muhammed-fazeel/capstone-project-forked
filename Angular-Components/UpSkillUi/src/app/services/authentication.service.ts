@@ -11,7 +11,7 @@ export class AuthenticationService {
   constructor(private http: HttpClient, private router: Router) { }
 
 
-  authenticateUser(user: User) {
+   authenticateUser(user: User) {
     this.http.post<TokenResponse>("https://localhost:7285/api/Login/Login", {
       "userName":user.userName,
       "password":user.password,
@@ -23,13 +23,21 @@ export class AuthenticationService {
           console.log(res);          
           //redirect to home
           localStorage.setItem("token", res.token);
-          localStorage.setItem("email",user.email)
+          localStorage.setItem("email",user.email);
+          localStorage.setItem("roleId",user.roleId as unknown as string)
           this.router.navigate(["/"]);
-          console.log("Everything is fine!");
+          
+
           
         },
         err => { 
           console.log(err.status);
          });
   }
+
+  checkRole(){
+
+  }
+
+
 }
