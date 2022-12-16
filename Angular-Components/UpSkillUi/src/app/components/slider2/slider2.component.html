@@ -16,7 +16,7 @@
           </div>
         </button>
       </div>
-      <div class="button-area">
+      <div>
         <button class="prev btn" appPrev (click)="buttonClick()">&lt;&lt;</button>
         <button class="next btn" appNext (click)="buttonClick()">&gt;&gt;</button>
       </div>
@@ -30,23 +30,27 @@
 
   <div class="modal-dialog" id="myModal">
     <div class="modal-content">
-      <button class="close-btn" (click)="doSomething()">x</button>
-      <div class="modal-body">
+      <button type="button" class="close-btn" data-bs-dismiss="modal">X</button>
+      <div class="">
         <div class="image-container">
           <img src="assets/images/{{cor.thumbnailUrl}}" alt="" class="course-image">
           <div class="btn-container">
             <Button class="cart-button btns">Add to cart</Button>
-            <Button class="more-detail btns">View more details</Button>
+            <Button class="more-detail btns" (click)="showCoursePage(cor.courseId)">More details</Button>
           </div>
         </div>
         <div class="course-details">
-          <div class="name-job">
-            <a href="" class="title-hyperlink"><b>{{cor.title}}</b></a>
+          <div>
+            <a href="" class="title-hyperlink">{{cor.title}}</a>
             <div class="extra-details">
-              <span class="best-seller">{{cor.rating}}</span>
-              <p class="updated-time">Last updated <b>{{cor.price}}</b></p>
+              <span class="rating">{{cor.rating}} star</span>
+              <div *ngFor="let i of rating_arr" class="rating-div">
+                <!-- <img src="assets/images/star.png" alt="" class="rating-star"> -->
+                <img src="assets/images/star2.png" alt="" class="rating-star">
+              </div>
+              <p class="price">Price <b>₹{{cor.price}}</b></p>
             </div>
-            <span class="course-duration">Total {{cor.duration}}</span>
+            <span class="course-duration">Total {{cor.duration}} hours</span>
             <div>{{cor.description}}
             </div>
             <ul>

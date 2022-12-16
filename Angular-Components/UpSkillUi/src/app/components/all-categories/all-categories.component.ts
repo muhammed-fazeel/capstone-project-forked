@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Category } from 'src/app/models/Category';
+import { Course } from 'src/app/models/Course';
 import { UpskillService } from 'src/app/services/upskill.service';
 
 @Component({
@@ -9,9 +11,11 @@ import { UpskillService } from 'src/app/services/upskill.service';
 })
 export class AllCategoriesComponent implements OnInit {
 
-  categoriesLst:Category[]=[]
+  categoriesLst:Category[]=[];
+  coursesLst:Course[]=[];
+  catId=1;
 
-  constructor(private upskillService:UpskillService) { }
+  constructor(private upskillService:UpskillService,private router:Router) { }
 
   ngOnInit(): void {
         this.upskillService.getAllCategories()
@@ -20,6 +24,20 @@ export class AllCategoriesComponent implements OnInit {
         console.log(data);
         console.log(this.categoriesLst);
     })  
+  }
+  showCourses(cid:number){
+    //fetch all the courses by catid using service
+    this.upskillService.getCoursesByCat(cid)
+    .subscribe(data=>{
+      this.coursesLst=data;
+      console.log('x:',this.coursesLst);
+    
+      this.router.navigate(['/courses',cid]);
+    
+    })
+
+
+
   }
 
 }

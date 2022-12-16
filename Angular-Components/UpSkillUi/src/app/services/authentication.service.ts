@@ -24,7 +24,7 @@ export class AuthenticationService {
           //redirect to home
           localStorage.setItem("token", res.token);
           localStorage.setItem("email",user.email)
-          this.router.navigate(["/home"]);
+          this.router.navigate(["/"]);
           console.log("Everything is fine!");
           
         },

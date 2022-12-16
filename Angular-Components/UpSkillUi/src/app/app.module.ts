@@ -9,7 +9,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { LoginComponent } from './components/login/login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { Route, RouterModule, Routes } from '@angular/router';
+import { Route, Router, RouterModule, Routes } from '@angular/router';
 import { RouteGuard } from './route-guard';
 import { HeaderComponent } from './components/header/header.component';
 import { BaseComponent } from './components/base/base.component';
@@ -20,8 +20,9 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { NextDirective } from './next.directive';
 import { PrevDirective } from './prev.directive';
 import { Slider2Component } from './components/slider2/slider2.component';
+import { CourseListComponent } from './components/course-list/course-list.component';
+import { AddCourseComponent } from './components/add-course/add-course.component';
 import { CoursePageComponent } from './components/course-page/course-page.component';
-import { FeaturesComponent } from './components/features/features.component';
 
 
 const routes: Routes=[
@@ -54,8 +55,17 @@ const routes: Routes=[
     component:SignUpComponent
   },
   {
-    path:"home",
-    component:HomeComponent
+    path:"courses/:id",
+    component:CourseListComponent
+  },
+  {
+    path:"course-page/:id",
+    component:CoursePageComponent
+  },
+  {
+    path:"add-course",
+    component:AddCourseComponent,
+    canActivate:[RouteGuard]
   }
 ]
 @NgModule({
@@ -75,7 +85,8 @@ const routes: Routes=[
     PrevDirective,
     Slider2Component,
     CoursePageComponent,
-    FeaturesComponent
+    CourseListComponent,
+    AddCourseComponent
   ],
 
   imports: [
