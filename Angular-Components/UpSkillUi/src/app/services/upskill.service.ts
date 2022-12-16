@@ -56,6 +56,10 @@ export class UpskillService {
     return courses;
   }
 
+  addCourse(course:Course):Observable<Course>{
+    return this.http.post<Course>(this.baseUrl+"AddCourse",course)
+  }
+
 
   //calls for enrolledCourses
 

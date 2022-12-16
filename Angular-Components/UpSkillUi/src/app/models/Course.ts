@@ -1,7 +1,7 @@
 import { Component } from "@angular/core";
 
 export class Course{
-    courseId:number;
+    courseId?:number;
     categoryId:number;
     title:string;
     price:number;
@@ -11,8 +11,8 @@ export class Course{
     noOfLectures:number;
     thumbnailUrl:string;
     description:string
-    constructor(courseId:number,categoryId:number,title:string,price:number,author:string,rating:number,duration:number,noOfLectures:number,thumbnailUrl:string,description:string){
-        this.courseId=courseId;
+    constructor(categoryId:number,title:string,price:number,author:string,rating:number,duration:number,noOfLectures:number,thumbnailUrl:string,description:string){
+        // this.courseId=courseId;
         this.categoryId=categoryId;
         this.title=title;
         this.price=price;

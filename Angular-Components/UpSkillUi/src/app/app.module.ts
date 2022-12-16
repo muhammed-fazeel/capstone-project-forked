@@ -9,7 +9,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { LoginComponent } from './components/login/login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { Route, RouterModule, Routes } from '@angular/router';
+import { Route, Router, RouterModule, Routes } from '@angular/router';
 import { RouteGuard } from './route-guard';
 import { HeaderComponent } from './components/header/header.component';
 import { BaseComponent } from './components/base/base.component';
@@ -22,6 +22,7 @@ import { PrevDirective } from './prev.directive';
 import { Slider2Component } from './components/slider2/slider2.component';
 import { CoursePageComponent } from './course-page/course-page.component';
 import { CourseListComponent } from './components/course-list/course-list.component';
+import { AddCourseComponent } from './components/add-course/add-course.component';
 
 
 const routes: Routes=[
@@ -60,6 +61,11 @@ const routes: Routes=[
   {
     path:"course-page/:id",
     component:CoursePageComponent
+  },
+  {
+    path:"add-course",
+    component:AddCourseComponent,
+    canActivate:[RouteGuard]
   }
 ]
 @NgModule({
@@ -79,7 +85,8 @@ const routes: Routes=[
     PrevDirective,
     Slider2Component,
     CoursePageComponent,
-    CourseListComponent
+    CourseListComponent,
+    AddCourseComponent
   ],
 
   imports: [

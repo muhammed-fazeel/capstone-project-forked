@@ -1,0 +1,69 @@
+{{course|json}}
+
+<!-- add validation here -->
+<!-- courseId should be dropdown of mentor's previous courses -->
+<div class="container" style="border:solid 1px">
+    <div class="column">
+    <form #f1="ngForm" action="" class="form-group">
+        <div class="form-group">
+            <!-- two way binding here man -->
+            <label for="categoryId">CategoryId</label>
+            <input #categoryId="ngModel" class="form-control" name="categoryId" [(ngModel)]="course.categoryId"/>
+        </div>
+    
+        <div class="form-group">
+            <!-- two way binding here man -->
+            <label for="title">Title</label>
+            <input #title="ngModel" class="form-control" name="title" [(ngModel)]="course.title"/>
+        </div>
+    
+        <div class="form-group">
+            <!-- two way binding here man -->
+            <label for="price">price of the Course(hrs)</label>
+            <input #courseId="ngModel" class="form-control" name="price" [(ngModel)]="course.price"/>
+        </div>
+    
+        <div class="form-group">
+            <!-- two way binding here man -->
+            <label for="author">Author</label>
+            <input #author="ngModel" class="form-control" name="author" [(ngModel)]="course.author"/>
+        </div>
+
+        <div class="form-group">
+            <!-- two way binding here man -->
+            <label for="rating">rating</label>
+            <input #rating="ngModel" class="form-control" name="rating" [(ngModel)]="course.rating"/>
+        </div>
+
+        <div class="form-group">
+            <!-- two way binding here man -->
+            <label for="duration">Duration</label>
+            <input #duration="ngModel" class="form-control" name="duration" [(ngModel)]="course.duration"/>
+        </div>
+
+        <div class="form-group">
+            <!-- two way binding here man -->
+            <label for="noOfLectures">noOfLectures</label>
+            <input #courseId="ngModel" class="form-control" name="noOfLectures" [(ngModel)]="course.noOfLectures"/>
+        </div>
+
+        <div class="form-group">
+            <!-- two way binding here man -->
+            <label for="thumbnailUrl">thumbnailUrl</label>
+            <input #thumbnailUrl="ngModel" class="form-control" name="thumbnailUrl" [(ngModel)]="course.thumbnailUrl"/>
+        </div>
+
+        <div class="form-group">
+            <!-- two way binding here man -->
+            <label for="description">description</label>
+            <input #description="ngModel" class="form-control" name="description" [(ngModel)]="course.description"/>
+        </div>
+    
+        <div>
+            <button (click)="addCourse()" class="btn btn-primary">Add Course</button>
+        </div>
+    
+    </form>
+    
+    </div>
+    </div>

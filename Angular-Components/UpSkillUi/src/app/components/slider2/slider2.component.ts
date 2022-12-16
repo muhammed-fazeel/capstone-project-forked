@@ -12,7 +12,7 @@ import { UpskillService } from 'src/app/services/upskill.service';
 export class Slider2Component implements OnInit {
 
   courses: Course[] = []
-  cor:Course=new Course(1,1,"",1,"",1,1,1,"","");
+  cor:Course=new Course(1,"",1,"",1,1,1,"","");
   rating_arr:number[]=[];
   list_videos:VideoLinks[]=[];
 
