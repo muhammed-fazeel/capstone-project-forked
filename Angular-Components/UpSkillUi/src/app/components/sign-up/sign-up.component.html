@@ -14,35 +14,38 @@
 </form>
  -->
 {{user|json}}
- <form #f1="ngForm" action="" class="">
-    <div class="login-container">
-       <div class="loginBox"> 
-           <div class="container container-radio">
-               <div class="radio-buttons row">
-                   <div class="col-md">
-                       <input type="radio" class="btn-check btn1"  name="roleId"  id="option1" value="1" autocomplete="off" #option1="ngModel" [(ngModel)]="user.roleId" >
-                       <label class="btn btn-outline-primary" for="option1">User</label></div>
-                   <div class="col-md">
-                       <input type="radio" class="btn-check" name="roleId" id="option2" va autocomplete="off" value="2" #option2="ngModel" [(ngModel)]="user.roleId">
-                       <label class="btn btn-outline-primary" for="option2">Mentor</label></div>
+<div class="container-main">
+    <form #f1="ngForm" action="" class="" (ngSubmit)="addUser()">
+        <div class="login-container">
+           <div class="loginBox"> 
+               <div class="container container-radio">
+                   <div class="radio-buttons row">
+                       <div class="col-md">
+                           <input type="radio" class="btn-check btn1"  name="roleId"  id="option1" value="1" autocomplete="off" #option1="ngModel" [(ngModel)]="user.roleId" >
+                           <label class="btn btn-outline-primary" for="option1">User</label></div>
+                       <div class="col-md">
+                           <input type="radio" class="btn-check" name="roleId" id="option2" va autocomplete="off" value="2" #option2="ngModel" [(ngModel)]="user.roleId">
+                           <label class="btn btn-outline-primary" for="option2">Mentor</label></div>
+                   </div>
                </div>
+               <img class="user" src="https://i.ibb.co/yVGxFPR/2.png" height="100px" width="100px" />
+       
+               <!-- <h3>Sign in here</h3> -->
+                   <div class="inputBox">
+                   <p class="labels" error-message></p>
+                   <div><label for=userName>Username:</label><input #userName="ngModel" name="userName" type="text" class="userName" [(ngModel)]="user.userName" /></div>
+                   <div><label>Email:</label><input #email="ngModel" name="email" type="text" class="email" [(ngModel)]="user.email" /></div>
+                   <div><label>Password:</label><input #password="ngModel" name="password" type="text" class="password" [(ngModel)]="user.password" /></div>
+                   <div><input class="login-text" type="submit" value="Sign-Up" /></div>
+                   <!-- <button type="submit"  class="btn btn-outline-success"(click)="addUser()" value="Sign Up" >Sign Up</button> -->
+                </div>
+    <!--              
+               <a href="#">Forget Password<br /> </a>
+               <div class="text-center">
+                   <p style="color:#59238F">Sign-Up</p>
+               </div> -->
            </div>
-           <img class="user" src="https://i.ibb.co/yVGxFPR/2.png" height="100px" width="100px" />
-   
-           <!-- <h3>Sign in here</h3> -->
-               <div class="inputBox">
-               <p class="labels" error-message></p>
-               <div><label for=userName>Username:</label><input #userName="ngModel" name="userName" type="text" class="userName" [(ngModel)]="user.userName" /></div>
-               <div><label>Email:</label><input #email="ngModel" name="email" type="text" class="email" [(ngModel)]="user.email" /></div>
-               <div><label>Password:</label><input #password="ngModel" name="password" type="text" class="password" [(ngModel)]="user.password" /></div>
-               <button type="submit"  class="btn btn-outline-success"(click)="addUser()" value="Sign Up" >Sign Up</button>
-            </div>
-<!--              
-           <a href="#">Forget Password<br /> </a>
-           <div class="text-center">
-               <p style="color:#59238F">Sign-Up</p>
-           </div> -->
+       
        </div>
-   
-   </div>
-   </form>
+       </form>
+</div>

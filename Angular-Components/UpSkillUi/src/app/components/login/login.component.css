@@ -56,7 +56,8 @@ html[xmlns] .clearfix {
     transform: translate(-50%, -50%);
     width: 300px;
     /* min-height: 200px; */
-    background: #2a2828;
+    /* background: #2a2828; */
+    background-color: black;
     border-radius: 10px;
     padding: 40px;
     box-sizing: border-box;
@@ -164,6 +165,6 @@ p {
     font-weight: 500;
     font-size: 2rem;
 }
-.btn-sm{
+/* .btn-sm{
     border-color: #59238F;
-}
+} */

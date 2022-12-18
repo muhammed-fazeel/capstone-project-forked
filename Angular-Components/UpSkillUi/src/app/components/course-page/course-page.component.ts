@@ -11,6 +11,7 @@ import { UpskillService } from 'src/app/services/upskill.service';
 })
 export class CoursePageComponent implements OnInit {
   catId:number=1;
+  textclass='text';
   videolinks:VideoLinks[]=[];
   present_video:SafeResourceUrl="https://www.youtube.com/watch?v=nOY0TWWvynU";
   constructor(private upskillservice:UpskillService,public sanitizer:DomSanitizer,private activatedRoute:ActivatedRoute) { }
@@ -21,10 +22,6 @@ export class CoursePageComponent implements OnInit {
       this.activatedRoute.params.subscribe(params => {
         console.log(params);
         let catId = params["id"];
-  
-     
-  
-  
   
       });
 
@@ -41,10 +38,8 @@ export class CoursePageComponent implements OnInit {
   showVideo(v:VideoLinks){
     this.present_video=this.sanitizer.bypassSecurityTrustResourceUrl(v.url);
     console.log(this.present_video);
+    this.textclass='textnew';
 
-  //   let ele = document.getElementById("video");
-  //   if(ele!=null){
-  //     ele.src=v.url;
   }
 
 

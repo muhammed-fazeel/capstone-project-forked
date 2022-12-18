@@ -26,6 +26,9 @@ import { CoursePageComponent } from './components/course-page/course-page.compon
 import { RouteGuard2 } from './route-guard2';
 import { RouteGuard1 } from './route-guard1';
 import { CartComponent } from './components/cart/cart.component';
+import { MentorHomeComponent } from './components/mentor-home/mentor-home.component';
+import { NavbargoodlookingComponent } from './components/navbargoodlooking/navbargoodlooking.component';
+import { Features2Component } from './components/features2/features2.component';
 
 
 const routes: Routes=[
@@ -90,7 +93,10 @@ const routes: Routes=[
     CoursePageComponent,
     CourseListComponent,
     AddCourseComponent,
-    CartComponent
+    CartComponent,
+    MentorHomeComponent,
+    NavbargoodlookingComponent,
+    Features2Component,
   ],
 
   imports: [

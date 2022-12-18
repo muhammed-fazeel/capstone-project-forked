@@ -1,0 +1,19 @@
+.navbar-brand{
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: white;
+}
+.nav-item{
+    padding-right: 2rem;
+    
+}
+.nav-link{
+    color: white;
+}
+.bg-lightt{
+    /* background-color: #00ADB5; */
+    background-image: url('gradient1.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
