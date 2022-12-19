@@ -1,7 +1,8 @@
 <DIV class="row" *ngFor="let c of courses_list">
     <div class="col-md-4">
         {{c.categoryId}}
-<img src="../assets/images/music.png" alt="Marketing">
+        <!-- <img src="../assets/images/music.png" alt="Marketing"> -->
+        <img src="../assets/images/{{c.thumbnailUrl}}" alt="Marketing" style="width:100px; height:100px">
 
     </div>
     <div class="col-md-8">

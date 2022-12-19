@@ -37,6 +37,10 @@
       <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success" type="submit">Search</button>
+        <button style="background-color: transparent; color: white; border: 1px solid transparent;" routerLink="cart">
+          <div class="badge bg-danger" style="font-size: 10px;">{{totalItem}}</div>
+          <img src="assets/images/cart.png" class="cart-img" alt="">
+        </button>
       </form>
 
       <!-- ngIf here when the user is logged in -->

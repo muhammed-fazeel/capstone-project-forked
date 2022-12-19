@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { Course } from 'src/app/models/Course';
-import { VideoLinks } from 'src/app/models/VideoLinks';
 import { UpskillService } from 'src/app/services/upskill.service';
+import { CartService } from 'src/app/services/cart.service';
 
 @Component({
   selector: 'app-slider2',
@@ -12,23 +11,33 @@ import { UpskillService } from 'src/app/services/upskill.service';
 export class Slider2Component implements OnInit {
 
   courses: Course[] = []
-  cor:Course=new Course(1,"",1,"",1,1,1,"","");
-  rating_arr:number[]=[];
-  list_videos:VideoLinks[]=[];
+  cor: Course = new Course(1,"",1,"",1,1,1,"","");
+  rating_arr: number[] = [];
+  public productList:any;
 
-  constructor(private upskillService: UpskillService,private router:Router) { }
-  formModal:any;
+  constructor(private upskillService: UpskillService, private cartService: CartService) { }
+  formModal: any;
   ngOnInit(): void {
     console.log("service called!")
     this.upskillService.getAllCourses()
       .subscribe(data => {
-        this.courses=data;
+        this.courses = data;
       })
+
+     this.upskillService.getCourse()
+    .subscribe(res=>{
+      this.productList=res;
+      this.productList.array.forEach((a:any)=>{
+        Object.assign(a,{quantity:1,total:a.price});
+      });
+      console.log("service called again!")
+    })
+
   }
-  openModal(courseId:number){
+  openModal(courseId: number) {
     this.upskillService.getCourseById(courseId).subscribe(data => {
-      this.cor=data;
-      this.rating_arr=[];
+      this.cor = data;
+      this.rating_arr = [];
       console.log(data);
       console.log(this.cor);
       for (let index = 0; index < this.cor.rating; index++) {
@@ -38,23 +47,9 @@ export class Slider2Component implements OnInit {
 
     this.formModal.show();
   }
-  doSomething(){
-    console.log("buttonClicked");
+ 
+  addToCart(cor:Course) {
+    this.cartService.addtoCart(this.cor);
     this.formModal.hide();
-  }
-  buttonClick(){
-    console.log("buttonClicked");
-  }
-
-  showCoursePage(cid:number){
-    //fetch all the courses by catid using service
-    this.upskillService.GetVideoLinksByCourseId(cid)
-    .subscribe(data=>{
-      this.list_videos=data;
-      console.log('x:',this.list_videos);
-    
-      this.router.navigate(['/course-page',cid]);
-    
-    })
   }
 }

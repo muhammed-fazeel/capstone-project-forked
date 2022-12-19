@@ -35,9 +35,5 @@ export class AllCategoriesComponent implements OnInit {
       this.router.navigate(['/courses',cid]);
     
     })
-
-
-
   }
-
-}
+} 

@@ -25,6 +25,10 @@ import { AddCourseComponent } from './components/add-course/add-course.component
 import { CoursePageComponent } from './components/course-page/course-page.component';
 import { RouteGuard2 } from './route-guard2';
 import { RouteGuard1 } from './route-guard1';
+import { CartComponent } from './components/cart/cart.component';
+import { MentorHomeComponent } from './components/mentor-home/mentor-home.component';
+import { NavbargoodlookingComponent } from './components/navbargoodlooking/navbargoodlooking.component';
+import { Features2Component } from './components/features2/features2.component';
 
 
 const routes: Routes=[
@@ -88,7 +92,11 @@ const routes: Routes=[
     Slider2Component,
     CoursePageComponent,
     CourseListComponent,
-    AddCourseComponent
+    AddCourseComponent,
+    CartComponent,
+    MentorHomeComponent,
+    NavbargoodlookingComponent,
+    Features2Component,
   ],
 
   imports: [

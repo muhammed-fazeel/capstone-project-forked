@@ -72,6 +72,11 @@ export class UpskillService {
     return this.http.get<User>(this.baseUrl+"")
   }
 
-
+  getCourse():Observable<Course>{
+    return this.http.get<Course>(this.baseUrl+"GetCourse/")
+    .pipe(map((res:any)=>{
+      return res;
+    }));
+  }
   
 }

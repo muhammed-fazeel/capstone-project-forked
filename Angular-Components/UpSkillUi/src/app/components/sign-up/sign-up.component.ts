@@ -20,6 +20,7 @@ export class SignUpComponent implements OnInit {
 
   addUser(){
     this.upSkillservice.addUser(this.user).subscribe(res=>{this.router.navigate(["/login"]);})
+    alert('user added')
 
   }
 

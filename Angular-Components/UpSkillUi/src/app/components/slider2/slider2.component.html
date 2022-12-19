@@ -11,14 +11,14 @@
             <div class="name-job">
               <a href="" class="title-hyperlink"><b>{{d.title}}</b></a>
               <p class="name">{{d.author}}</p>
-              <p><b>₹ {{d.price}}</b></p>
+              <p class="pricex"><b>₹ {{d.price}}</b></p>
             </div>
           </div>
         </button>
       </div>
       <div>
-        <button class="prev btn" appPrev (click)="buttonClick()">&lt;&lt;</button>
-        <button class="next btn" appNext (click)="buttonClick()">&gt;&gt;</button>
+        <button class="prev btnx button" appPrev>&lt;&lt;</button>
+        <button class="next btnx button" appNext>&gt;&gt;</button>
       </div>
     </div>
   </div>
@@ -28,15 +28,23 @@
 <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
   aria-labelledby="staticBackdropLabel" aria-hidden="true">
 
-  <div class="modal-dialog" id="myModal">
+  <div class="modal-dialog">
     <div class="modal-content">
-      <button type="button" class="close-btn" data-bs-dismiss="modal">X</button>
-      <div class="">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel"><a href="" class="title-hyperlink">{{cor.title}}</a></h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
         <div class="image-container">
-          <img src="assets/images/{{cor.thumbnailUrl}}" alt="" class="course-image">
+          <img src="assets/images/{{cor.thumbnailUrl}}" alt="NO-Image" class="course-image">
           <div class="btn-container">
-            <Button class="cart-button btns">Add to cart</Button>
-            <Button class="more-detail btns" (click)="showCoursePage(cor.courseId)">More details</Button>
+            <div class="bts">
+              <Button class="cart-button btns" (click)="addToCart(cor)">Add to cart</Button>
+              <!-- <Button class="cart-button btns" (click)="addToCart()">Add to cart</Button> -->
+            </div>
+            <div class="bts">
+              <Button class="more-detail btns">More details</Button>
+            </div>
           </div>
         </div>
         <div class="course-details">
@@ -45,13 +53,13 @@
             <div class="extra-details">
               <span class="rating">{{cor.rating}} star</span>
               <div *ngFor="let i of rating_arr" class="rating-div">
-                <!-- <img src="assets/images/star.png" alt="" class="rating-star"> -->
                 <img src="assets/images/star2.png" alt="" class="rating-star">
               </div>
-              <p class="price">Price <b>₹{{cor.price}}</b></p>
+              <div><span class="price">Price <b>₹{{cor.price}}</b></span></div>
             </div>
             <span class="course-duration">Total {{cor.duration}} hours</span>
-            <div>{{cor.description}}
+            <div>
+              {{cor.description}}
             </div>
             <ul>
               <li>Create their own Python Programs</li>
