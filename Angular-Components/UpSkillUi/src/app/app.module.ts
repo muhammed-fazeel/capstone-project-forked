@@ -53,7 +53,7 @@ const routes: Routes=[
   {
     path:"add-video",
     component:AddVideoComponent,
-    canActivate:[RouteGuard]
+    canActivate:[RouteGuard,RouteGuard2]
   },
 
   {
@@ -71,8 +71,10 @@ const routes: Routes=[
   {
     path:"add-course",
     component:AddCourseComponent,
-    canActivate:[RouteGuard],
-  }
+    canActivate:[RouteGuard,RouteGuard2]
+  },
+  {path:"cart",
+component:CartComponent}
 ]
 @NgModule({
   declarations: [

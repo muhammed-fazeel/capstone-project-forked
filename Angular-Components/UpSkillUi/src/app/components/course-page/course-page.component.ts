@@ -20,7 +20,7 @@ export class CoursePageComponent implements OnInit {
 
  
       this.activatedRoute.params.subscribe(params => {
-        console.log(params);
+        // console.log(params);
         let catId = params["id"];
   
       });
@@ -28,7 +28,7 @@ export class CoursePageComponent implements OnInit {
     
     this.upskillservice.GetVideoLinksByCourseId(this.catId).subscribe(data=>{
       this.videolinks=data;
-      console.log(this.videolinks);
+      // console.log(this.videolinks);
 
       
     });
@@ -37,7 +37,7 @@ export class CoursePageComponent implements OnInit {
 
   showVideo(v:VideoLinks){
     this.present_video=this.sanitizer.bypassSecurityTrustResourceUrl(v.url);
-    console.log(this.present_video);
+    // console.log(this.present_video);
     this.textclass='textnew';
 
   }

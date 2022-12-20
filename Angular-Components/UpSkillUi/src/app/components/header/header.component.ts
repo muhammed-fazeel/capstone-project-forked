@@ -12,6 +12,7 @@ export class HeaderComponent implements OnInit {
 
   logInFlag:boolean=true;
   public totalItem:number=0;
+  mentor:boolean=false;
 
   constructor(private cartService:CartService) { }
 
@@ -28,6 +29,10 @@ export class HeaderComponent implements OnInit {
       this.logInFlag=false;
     }
     // location.reload();
+
+    if(localStorage.getItem("roleId")=="2"){
+      this.mentor=true;
+    };
     
   }
 

@@ -21,8 +21,8 @@ export class AllCategoriesComponent implements OnInit {
         this.upskillService.getAllCategories()
     .subscribe(data=>{
         this.categoriesLst=data;
-        console.log(data);
-        console.log(this.categoriesLst);
+        // console.log(data);
+        // console.log(this.categoriesLst);
     })  
   }
   showCourses(cid:number){
@@ -30,7 +30,7 @@ export class AllCategoriesComponent implements OnInit {
     this.upskillService.getCoursesByCat(cid)
     .subscribe(data=>{
       this.coursesLst=data;
-      console.log('x:',this.coursesLst);
+      // console.log('x:',this.coursesLst);
     
       this.router.navigate(['/courses',cid]);
     

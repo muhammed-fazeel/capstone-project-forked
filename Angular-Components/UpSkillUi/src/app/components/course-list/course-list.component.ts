@@ -18,14 +18,14 @@ export class CourseListComponent implements OnInit {
   ngOnInit(): void {
 
     this.activatedRoute.params.subscribe(params => {
-      console.log(params);
+      // console.log(params);
       let catId = params["id"];
 
       this.upskillService.getCoursesByCat(catId)
         .subscribe(data => {
           this.courses_list = data;
-          console.log('data1:', data);
-          console.log('cl:', this.courses_list);
+          // console.log('data1:', data);
+          // console.log('cl:', this.courses_list);
         })
 
 
