@@ -1,6 +1,6 @@
 <div class="grid-container">
-  <button class="grid-item" *ngFor="let c of categoriesLst" (click)="showCourses(c.categoryId)">
-    <div class="card">
+  <button class="grid-item" style="border-radius: 2%;" *ngFor="let c of categoriesLst" (click)="showCourses(c.categoryId)">
+    <div class="card" style="border-radius: 2%;">
       <img class="card-img-top" src={{c.imageUrl}} alt="Card image cap">
       <div class="card-body">
         <p class="card-text">{{c.categoryName}}</p>

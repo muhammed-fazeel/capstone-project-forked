@@ -30,6 +30,7 @@ import { MentorHomeComponent } from './components/mentor-home/mentor-home.compon
 import { NavbargoodlookingComponent } from './components/navbargoodlooking/navbargoodlooking.component';
 import { Features2Component } from './components/features2/features2.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
+import { EnrolledCoursesComponent } from './components/enrolled-courses/enrolled-courses.component';
 
 
 const routes: Routes=[
@@ -108,6 +109,7 @@ const routes: Routes=[
     NavbargoodlookingComponent,
     Features2Component,
     AboutUsComponent,
+    EnrolledCoursesComponent,
   ],
 
   imports: [

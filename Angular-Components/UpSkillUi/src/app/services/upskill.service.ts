@@ -60,6 +60,10 @@ export class UpskillService {
     return this.http.post<Course>(this.baseUrl+"AddCourse",course)
   }
 
+  getEnrolledCoursesById(userId:number):Observable<Course[]>{
+    var courses=this.http.get<Course[]>(this.baseUrl+"GetEnrolledCourses?userid="+userId);
+    return courses;
+  }
 
   //calls for enrolledCourses
 
