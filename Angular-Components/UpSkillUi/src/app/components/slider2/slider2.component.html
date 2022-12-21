@@ -1,3 +1,4 @@
+<h2><b>Top Courses</b></h2>
 <section class="product">
   <div class="container-fluid">
     <div class="slider-wrap">
@@ -17,8 +18,8 @@
         </button>
       </div>
       <div>
-        <button style="border-width: 0;" class="prev btnx button" appPrev><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
-        <button style="border-width: 0;" class="next btnx button" appNext><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+        <button class="prev btnx button" appPrev>&lt;&lt;</button>
+        <button class="next btnx button" appNext>&gt;&gt;</button>
       </div>
     </div>
   </div>
@@ -39,8 +40,7 @@
           <img src="assets/images/{{cor.thumbnailUrl}}" alt="NO-Image" class="course-image">
           <div class="btn-container">
             <div class="bts">
-              <Button class="cart-button btns" (click)="addToCart(cor)">Add to cart</Button>
-              <!-- <Button class="cart-button btns" (click)="addToCart()">Add to cart</Button> -->
+              <Button class="cart-button btns" (click)="addToCart(cor)"  data-bs-dismiss="modal">Add to cart</Button>
             </div>
             <div class="bts">
               <Button class="more-detail btns">More details</Button>
