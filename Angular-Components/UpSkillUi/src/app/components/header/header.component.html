@@ -12,12 +12,22 @@
         <li class="nav-item">
           <a class="nav-link" href="profile">Profile</a>
         </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="aboutUs">About Us</a>
+        </li>
+
+        <div *ngIf="mentor">
         <li class="nav-item">
           <a class="nav-link" href="add-video">Add-Video</a>
         </li>
+      </div>
+      <div *ngIf="mentor">
+
         <li class="nav-item">
           <a class="nav-link" href="add-course">Add-Course</a>
         </li>
+      </div>
 
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">

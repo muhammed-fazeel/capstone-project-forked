@@ -19,18 +19,19 @@ export class CoursePageComponent implements OnInit {
 
   ngOnInit(): void {
       this.activatedRoute.params.subscribe(params => {
-        console.log(params);
+        // console.log(params);
         let catId = params["id"];
       });
     this.upskillservice.GetVideoLinksByCourseId(this.catId).subscribe(data=>{
       this.videolinks=data;
-      console.log(this.videolinks);  
+      // console.log(this.videolinks);
+
+      
     });
   }
-
   showVideo(v:VideoLinks){
     this.present_video=this.sanitizer.bypassSecurityTrustResourceUrl(v.url);
-    console.log(this.present_video);
+    // console.log(this.present_video);
     this.textclass='textnew';
     this.coursetitle=v.title;
   }

@@ -1,8 +1,8 @@
-{{course|json}}
+<!-- {{course|json}} -->
 
 <!-- add validation here -->
 <!-- courseId should be dropdown of mentor's previous courses -->
-<div class="container" style="border:solid 1px">
+<div class="container col-md-5" style="border:solid 1px; border-radius: 2%; padding: 2%;">
     <div class="column">
     <form #f1="ngForm" action="" class="form-group">
         <div class="form-group">
@@ -59,8 +59,8 @@
             <input #description="ngModel" class="form-control" name="description" [(ngModel)]="course.description"/>
         </div>
     
-        <div>
-            <button (click)="addCourse()" class="btn btn-primary">Add Course</button>
+        <div >
+            <button  (click)="addCourse()" class="btn btn-primary">Add Course</button>
         </div>
     
     </form>

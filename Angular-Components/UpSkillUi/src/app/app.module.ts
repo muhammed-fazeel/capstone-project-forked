@@ -29,6 +29,7 @@ import { CartComponent } from './components/cart/cart.component';
 import { MentorHomeComponent } from './components/mentor-home/mentor-home.component';
 import { NavbargoodlookingComponent } from './components/navbargoodlooking/navbargoodlooking.component';
 import { Features2Component } from './components/features2/features2.component';
+import { AboutUsComponent } from './components/about-us/about-us.component';
 
 
 const routes: Routes=[
@@ -47,7 +48,7 @@ const routes: Routes=[
   {
     path:"profile",
     component:ProfileComponent,
-    canActivate:[RouteGuard,RouteGuard1]
+    canActivate:[RouteGuard]
   },
 
   {
@@ -71,8 +72,17 @@ const routes: Routes=[
   {
     path:"add-course",
     component:AddCourseComponent,
-    canActivate:[RouteGuard,RouteGuard2],
+    canActivate:[RouteGuard,RouteGuard2]
+  },
+  {
+    path:"cart",
+  component:CartComponent
+  },
+  {
+    path:"aboutUs",
+    component:AboutUsComponent
   }
+
 ]
 @NgModule({
   declarations: [
@@ -97,6 +107,7 @@ const routes: Routes=[
     MentorHomeComponent,
     NavbargoodlookingComponent,
     Features2Component,
+    AboutUsComponent,
   ],
 
   imports: [
