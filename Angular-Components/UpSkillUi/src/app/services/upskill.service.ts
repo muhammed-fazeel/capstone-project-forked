@@ -66,6 +66,10 @@ export class UpskillService {
   }
 
 
+  getEnrolledCoursesById(userId:number):Observable<Course[]>{
+    var courses=this.http.get<Course[]>(this.baseUrl+"GetEnrolledCourses?userid="+userId);
+    return courses;
+  }
 
   //calls for enrolledCourses
 

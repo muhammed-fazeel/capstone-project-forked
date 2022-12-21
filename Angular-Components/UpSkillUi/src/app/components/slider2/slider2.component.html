@@ -1,3 +1,4 @@
+<h2><b>Top Courses</b></h2>
 <section class="product">
   <div class="container-fluid">
     <div class="slider-wrap">
@@ -39,8 +40,7 @@
           <img src="assets/images/{{cor.thumbnailUrl}}" alt="NO-Image" class="course-image">
           <div class="btn-container">
             <div class="bts">
-              <Button class="cart-button btns" (click)="addToCart(cor)">Add to cart</Button>
-              <!-- <Button class="cart-button btns" (click)="addToCart()">Add to cart</Button> -->
+              <Button class="cart-button btns" (click)="addToCart(cor)"  data-bs-dismiss="modal">Add to cart</Button>
             </div>
             <div class="bts">
               <Button class="more-detail btns">More details</Button>

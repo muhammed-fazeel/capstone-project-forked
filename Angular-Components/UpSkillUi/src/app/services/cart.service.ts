@@ -1,28 +1,25 @@
-import { Injectable } from '@angular/core';
+import { EventEmitter, Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
+import { Course } from '../models/Course';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CartService {
+  cartData=new EventEmitter<Course[] | []>();
   public cartItemList: any = [];
   public productList = new BehaviorSubject<any>([]);
 
   constructor() { }
   getProduct() {
+    // let data:any= localStorage.getItem('localCart');
+    // this.productList=JSON.parse(data);
     return this.productList.asObservable();
   }
 
   setProduct(product: any) {
     this.cartItemList.push(...product);
     this.productList.next(product);
-  }
-
-  addtoCart(product: any) {
-    this.cartItemList.push(product);
-    this.productList.next(this.cartItemList);
-    this.getTotalPrice();
-    console.log(this.cartItemList);
   }
 
   getTotalPrice(): number {
@@ -46,4 +43,22 @@ export class CartService {
     this.cartItemList = [];
     this.productList.next(this.cartItemList);
   }
+
+  addLocalCart(data:Course){
+    let cartData=[];
+    let localCart=localStorage.getItem('localCart');
+    if(!localCart){
+      localStorage.setItem('localCart',JSON.stringify([data]));
+    }
+    else{
+      cartData=JSON.parse(localCart);
+      cartData.push(data);
+      localStorage.setItem('localCart',JSON.stringify(cartData));
+    }
+    this.cartItemList.push(data);
+    this.productList.next(this.cartItemList);
+    this.cartData.emit(cartData);
+    this.getTotalPrice();
+  }
+  
 }

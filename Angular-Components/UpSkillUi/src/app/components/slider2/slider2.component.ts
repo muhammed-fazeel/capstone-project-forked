@@ -49,7 +49,7 @@ export class Slider2Component implements OnInit {
   }
  
   addToCart(cor:Course) {
-    this.cartService.addtoCart(this.cor);
-    this.formModal.hide();
+    this.cartService.addLocalCart(cor);
+    // this.formModal.hide();
   }
 }

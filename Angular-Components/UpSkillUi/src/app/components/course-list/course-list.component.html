@@ -1,14 +1,27 @@
-<DIV class="row" *ngFor="let c of courses_list">
-    <div class="col-md-4">
-        {{c.categoryId}}
-        <!-- <img src="../assets/images/music.png" alt="Marketing"> -->
-        <img src="../assets/images/{{c.thumbnailUrl}}" alt="Marketing" style="width:100px; height:100px">
-
+<div class="card mb-3 box" style="margin:auto;margin-top: 2%;" *ngFor="let c of courses_list">
+    <div class="row g-0">
+        <div class="col-md-2 img-container">
+            <img src="assets/images/{{c.thumbnailUrl}}" class="img-fluid rounded-start" alt="...">
+        </div>
+        <div class="col-md-6 detail-container">
+            <div class="card-body">
+                <a class="card-title">
+                    <h5><b>{{c.title}}</b></h5>
+                </a>
+                <p>{{c.description}}</p>
+                <p class="card-text"><small class="text-muted">{{c.author}}</small></p>
+                <span class="rating">{{c.rating}} star</span>
+                <!-- <div *ngFor="let i of rating_arr" (load)="show({{c.courseId}})">
+                    <img src="assets/images/star2.png" alt="NO-Image">
+                </div> -->
+                <p class="card-text"><small class="text-muted">{{c.duration}} Total hours * {{c.noOfLectures}} Lectures</small></p>
+                <p>Price <b class="price">₹{{c.price}}</b></p>
+            </div>
+        </div>
+        <div class="col-md-2 btn-container">
+            <div><button class="btn btn-primary add-to-cart" (click)="addToCart(c)">Add to cart</button></div>
+            <div><button class="btn btn-primary enroll">Enroll</button></div>
+            <div><button class="btn btn-primary more-details">More Details</button></div>                                
+        </div>
     </div>
-    <div class="col-md-8">
-        <h3>Python For Beginners</h3>
-        <p>C++ For BAsic to advance.</p>
-        <p>C Basic Language.</p>
-
-    </div>
-</DIV>
+</div>

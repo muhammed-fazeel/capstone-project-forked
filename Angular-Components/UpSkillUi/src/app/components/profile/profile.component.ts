@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { map } from 'rxjs';
 import { Category } from 'src/app/models/Category';
+import { Course } from 'src/app/models/Course';
 import { User } from 'src/app/models/User';
 import { UpskillService } from 'src/app/services/upskill.service';
 
@@ -17,6 +18,7 @@ x:Category[]=[
   new Category(3,"sdsd","img1")
   
 ];
+enrolledCourses:Course[]=[];
 
 user:User=new User(1,1,"default","default","default","blah");
 
@@ -40,6 +42,8 @@ user:User=new User(1,1,"default","default","default","blah");
       this.user.pictureUrl=data.pictureUrl;
       this.user.roleId=data.roleId;
       this.user.userName=data.userName})
+
+    this.upskillService.getEnrolledCoursesById(this.user.userId!=null?this.user.userId:1).subscribe(data=>this.enrolledCourses=data);
   }
 
   
