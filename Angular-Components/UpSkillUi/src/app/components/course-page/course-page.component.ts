@@ -12,34 +12,27 @@ import { UpskillService } from 'src/app/services/upskill.service';
 export class CoursePageComponent implements OnInit {
   catId:number=1;
   textclass='text';
+  coursetitle:string="";
   videolinks:VideoLinks[]=[];
   present_video:SafeResourceUrl="https://www.youtube.com/watch?v=nOY0TWWvynU";
   constructor(private upskillservice:UpskillService,public sanitizer:DomSanitizer,private activatedRoute:ActivatedRoute) { }
 
   ngOnInit(): void {
-
- 
       this.activatedRoute.params.subscribe(params => {
         console.log(params);
         let catId = params["id"];
-  
       });
-
-    
     this.upskillservice.GetVideoLinksByCourseId(this.catId).subscribe(data=>{
       this.videolinks=data;
-      console.log(this.videolinks);
-
-      
+      console.log(this.videolinks);  
     });
-    
   }
 
   showVideo(v:VideoLinks){
     this.present_video=this.sanitizer.bypassSecurityTrustResourceUrl(v.url);
     console.log(this.present_video);
     this.textclass='textnew';
-
+    this.coursetitle=v.title;
   }
 
 
