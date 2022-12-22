@@ -7,6 +7,7 @@ import { Course } from '../models/Course';
 import { map } from 'rxjs';
 import { User } from '../models/User';
 import { VideoLinks } from '../models/VideoLinks';
+import { Review } from '../models/Review';
 
 @Injectable({
   providedIn: 'root'
@@ -59,6 +60,11 @@ export class UpskillService {
   addCourse(course:Course):Observable<Course>{
     return this.http.post<Course>(this.baseUrl+"AddCourse",course)
   }
+
+  getReviews(courseId:number):Observable<Review[]>{
+    return this.http.get<Review[]>(this.baseUrl+"GetReviews/"+courseId)
+  }
+
 
   getEnrolledCoursesById(userId:number):Observable<Course[]>{
     var courses=this.http.get<Course[]>(this.baseUrl+"GetEnrolledCourses?userid="+userId);
