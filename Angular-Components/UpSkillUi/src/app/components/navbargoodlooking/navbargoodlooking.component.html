@@ -36,13 +36,22 @@
             <a class="nav-link" href="/all-courses">All Courses</a>
           </li> -->
           <li class="nav-item">
-            <a class="nav-link" href="#">Enrolled Courses</a>
+            <a class="nav-link" href="/aboutUs">About Us</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/profile">Profile</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/login">Login</a>
+          </li>
+          <li><button style="background-color: transparent; color: white; border: 1px solid transparent;" routerLink="cart">
+            <div class="badge bg-danger" style="font-size: 10px;">{{totalItem}}</div>
+            <img src="assets/images/cart.png" class="cart-img" alt="">
+          </button></li>
+          <li>
+            <button *ngIf="!logInFlag" class="btn btn-outline-success" style="margin: 1%;" (click)="logout()">
+              <a class="nav-link" href="LogOut">LogOut</a>
+            </button>
           </li>
         </ul>
       </div>

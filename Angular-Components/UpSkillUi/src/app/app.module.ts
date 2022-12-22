@@ -107,10 +107,10 @@ const routes: Routes=[
     AddCourseComponent,
     CartComponent,
     MentorHomeComponent,
-    NavbargoodlookingComponent,
     Features2Component,
     AboutUsComponent,
-    HomePageComponent
+    HomePageComponent,
+    NavbargoodlookingComponent
   ],
 
   imports: [
