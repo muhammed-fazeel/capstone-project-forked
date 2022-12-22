@@ -8,6 +8,7 @@ import { map } from 'rxjs';
 import { User } from '../models/User';
 import { VideoLinks } from '../models/VideoLinks';
 import { Review } from '../models/Review';
+import { EnrolledCourses } from '../models/EnrolledCourse';
 
 @Injectable({
   providedIn: 'root'
@@ -70,6 +71,8 @@ export class UpskillService {
     var courses=this.http.get<Course[]>(this.baseUrl+"GetEnrolledCourses?userid="+userId);
     return courses;
   }
+
+  // addEnrollCourse(enrolledCourse:EnrolledCourses)
 
   //calls for enrolledCourses
 
