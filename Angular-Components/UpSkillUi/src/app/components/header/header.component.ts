@@ -14,7 +14,11 @@ export class HeaderComponent implements OnInit {
   public totalItem:number=0;
   mentor:boolean=false;
 
-  constructor(private cartService:CartService) { }
+  constructor(private cartService:CartService) { 
+
+    console.log('flag:',this.cartService.flag);
+    this.logInFlag=this.cartService.flag;
+  }
 
   ngOnInit(): void {
     this.cartService.getProduct()
@@ -24,9 +28,11 @@ export class HeaderComponent implements OnInit {
 
     if (localStorage.getItem("token")==null){
       this.logInFlag=true;
+      //this.cartService.flag=true;
     }
     else{
       this.logInFlag=false;
+      //this.cartService.flag=false;
     }
     // location.reload();
 
@@ -38,6 +44,7 @@ export class HeaderComponent implements OnInit {
 
   logout(){
     localStorage.clear();
+    this.logInFlag=false;
   }
 
 

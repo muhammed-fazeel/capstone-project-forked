@@ -3,12 +3,13 @@ import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { TokenResponse } from '../models/token-response';
 import { User } from '../models/User';
+import { CartService } from './cart.service';
 @Injectable({
   providedIn: 'root'
 })
 export class AuthenticationService {
 
-  constructor(private http: HttpClient, private router: Router) { }
+  constructor(private http: HttpClient, private router: Router,private cartService:CartService) { }
 
 
    authenticateUser(user: User) {
@@ -25,9 +26,19 @@ export class AuthenticationService {
           localStorage.setItem("token", res.token);
           localStorage.setItem("email",user.email);
           localStorage.setItem("roleId",user.roleId as unknown as string)
-          this.router.navigate(["/"]);
-          
 
+          this.cartService.flag=true;
+
+          // this.router.navigate(["/"]);
+
+          // location.reload();
+
+          // this.router.navigate(['/profile'])
+
+          this.router.navigate(['/'])
+  .then(() => {
+    window.location.reload();
+  });
           
         },
         err => { 

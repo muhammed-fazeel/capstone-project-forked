@@ -3,10 +3,10 @@
     height: 100vh;
     overflow: hidden;
     /* background-color: #00ADB5;   */
-    background-image: url('./gradient1.svg');
+    /* background-image: url('./gradient1.svg');
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
 
 }
 .clearfix:after {
@@ -57,12 +57,13 @@ html[xmlns] .clearfix {
     width: 300px;
     /* min-height: 200px; */
     /* background: #2a2828; */
-    background-color: black;
+    background-color: transparent;
+    backdrop-filter: blur(50px);
     border-radius: 10px;
     padding: 40px;
     box-sizing: border-box;
-    color: white;
-    /* box-shadow: 2px 2px 40px #EEEEEE; */
+    /* color: white; */
+    box-shadow: 10px 10px 40px #b4b2b2;
 }
 
 .user {
