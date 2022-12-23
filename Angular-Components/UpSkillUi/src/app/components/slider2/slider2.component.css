@@ -127,11 +127,7 @@ body {
 
 /* ************************************************************************* */
 
-.course-details {
-  background-color: #fff;
-  width: 380px;
-  float: right;
-}
+
 
 .rating {
   background-color: rgb(234, 234, 136);
@@ -166,11 +162,25 @@ body {
   margin: auto;
 }
 
+.modal-dialog{
+  margin-right: 550px;
+  /* border: 2px solid  red; */
+  /* margin: auto; */
+}
+
 .image-container {
   float: left;
   display: flex;
   flex-direction: column;
-  width: 22vw;
+  width: 15vw;
+  /* border: 2px solid red; */
+}
+
+.course-details {
+  background-color: #fff;
+  width: 380px;
+  float: right;
+  /* border: 2px solid yellow; */
 }
 
 .btn-container {
@@ -178,9 +188,6 @@ body {
   text-align: center;
 }
 
-.modal-dialog{
-  margin-right: 550px;
-}
 
 .modal-content {
   width: 52vw;
