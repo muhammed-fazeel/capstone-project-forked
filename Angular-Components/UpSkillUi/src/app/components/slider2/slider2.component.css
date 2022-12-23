@@ -170,16 +170,18 @@ body {
   float: left;
   display: flex;
   flex-direction: column;
-  width: 22vw;
+  width: 15vw;
 }
 
 .btn-container {
   margin-top: 30px;
+  margin-left: 70px;
   text-align: center;
 }
 
 .modal-dialog{
-  margin-right: 550px;
+  margin-right: 420px;
+  /* margin: auto; */
 }
 
 .modal-content {

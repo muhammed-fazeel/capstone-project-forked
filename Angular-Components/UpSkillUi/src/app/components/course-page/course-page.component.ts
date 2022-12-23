@@ -28,7 +28,7 @@ export class CoursePageComponent implements OnInit {
   ngOnInit(): void {
       this.activatedRoute.params.subscribe(params => {
         // console.log(params);
-        let courseId = params["id"];
+        this.courseId = params["id"];
       });
     this.upskillservice.GetVideoLinksByCourseId(this.courseId).subscribe(data=>{
       this.videolinks=data;
@@ -43,6 +43,7 @@ export class CoursePageComponent implements OnInit {
 
     this.upskillservice.getUserByEmail().subscribe(data=>{
       this.author=data.userName;
+      console.log(this.author);
     })
   }
   showVideo(v:VideoLinks){
@@ -56,8 +57,6 @@ export class CoursePageComponent implements OnInit {
     this.review.author=this.author;
     this.review.courseId=this.courseId;
     this.upskillservice.addReview(this.review).subscribe(res=>{this.router.navigate(["/course-page"]);location.reload()})
-
   }
-
 
 }

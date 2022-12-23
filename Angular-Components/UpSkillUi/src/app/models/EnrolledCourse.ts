@@ -3,11 +3,10 @@ import { User } from "./User";
 
 export class EnrolledCourses{
 
-    enrolledCoursesId:number;
-    userId:number;
+    enrolledCoursesId?:number;
+    userId?:number;
     courseID:number;
-    constructor(enrolledCoursesId:number,userId:number,courseID:number){
-        this.enrolledCoursesId=enrolledCoursesId;
+    constructor(userId:number,courseID:number){
         this.userId=userId;
         this.courseID=courseID;
     }

@@ -10,7 +10,10 @@ export class NavbargoodlookingComponent implements OnInit {
   logInFlag:boolean=true;
   public totalItem:number=0;
   mentor:boolean=false;
-  constructor(private cartService:CartService) { }
+  constructor(private cartService:CartService) {
+    console.log('flag:',this.cartService.flag);
+    this.logInFlag=this.cartService.flag;
+   }
 
   ngOnInit(): void {
     this.cartService.getProduct()
@@ -24,9 +27,14 @@ export class NavbargoodlookingComponent implements OnInit {
     else{
       this.logInFlag=false;
     }
+
+    if(localStorage.getItem("roleId")=="2"){
+      this.mentor=true;
+    };
   }
   logout(){
     localStorage.clear();
+    this.logInFlag=false;
   }
 
 }
