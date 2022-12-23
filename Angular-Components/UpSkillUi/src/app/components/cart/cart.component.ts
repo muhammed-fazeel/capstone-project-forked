@@ -6,6 +6,8 @@ import { Observable } from 'rxjs';
 import { map } from 'rxjs';
 import { JsonPipe } from '@angular/common';
 import { Router } from '@angular/router';
+import { EnrolledCourses } from 'src/app/models/EnrolledCourse';
+import { User } from 'src/app/models/User';
 
 @Component({
   selector: 'app-cart',
@@ -17,6 +19,9 @@ export class CartComponent implements OnInit {
   public product: any=[];
   public grandTotal !: number;
   rating_arr: number[] = [];
+  enrolledCourse:EnrolledCourses=new EnrolledCourses(10,10);
+  // localUser:User=new User(0,1,"","","","");
+  localUserId:any=100;
   
   constructor(private cartService: CartService, private upskillService:UpskillService , private router:Router) { }
 
@@ -53,6 +58,22 @@ export class CartComponent implements OnInit {
 
     // this.router.navigate(["/profile"]);
     
+  }
+
+  enroll(courseId:number){
+
+    this.upskillService.getUserByEmail().subscribe(res=>{this.localUserId=res.userId;
+      console.log("the userId is: "+ this.localUserId);
+      this.enrolledCourse.userId=res.userId;   
+      
+      this.enrolledCourse.courseID=courseId;
+      this.upskillService.addEnrolledCourse(this.enrolledCourse).subscribe(res=>{this.router.navigate(["profile"])})
+    });
+    //this.enrolledCourse.userId=this.localUserId ;
+    //console.log("the userId is: "+ this.localUserId);
+    
+    // =userId;
+   
   }
 
 }

@@ -12,7 +12,7 @@ import { UpskillService } from 'src/app/services/upskill.service';
   styleUrls: ['./course-page.component.css']
 })
 export class CoursePageComponent implements OnInit {
-  courseId:number=5;
+  courseId:number=1;
   textclass='text';
   course=new Course(1,"",1,"",1,1,1,"","");
   coursetitle:string="";
@@ -24,7 +24,7 @@ export class CoursePageComponent implements OnInit {
   ngOnInit(): void {
       this.activatedRoute.params.subscribe(params => {
         // console.log(params);
-        let catId = params["id"];
+        this.courseId = params["id"];
       });
     this.upskillservice.GetVideoLinksByCourseId(this.courseId).subscribe(data=>{
       this.videolinks=data;
