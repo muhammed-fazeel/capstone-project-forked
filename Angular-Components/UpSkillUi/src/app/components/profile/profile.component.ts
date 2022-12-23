@@ -21,12 +21,16 @@ x:Category[]=[
 enrolledCourses:Course[]=[];
 
 user:User=new User(1,1,"default","default","default","blah");
+userId=0;
 
 
   categoriesLst?:Category[];
   constructor(private upskillService:UpskillService) { }
 
   ngOnInit(): void {
+
+
+
 
     console.log(this.x);
 
@@ -41,9 +45,13 @@ user:User=new User(1,1,"default","default","default","blah");
       this.user.email=data.email;
       this.user.pictureUrl=data.pictureUrl;
       this.user.roleId=data.roleId;
-      this.user.userName=data.userName})
+      this.user.userId=data.userId;
+      this.user.userName=data.userName
 
-    this.upskillService.getEnrolledCoursesById(this.user.userId!=null?this.user.userId:1).subscribe(data=>this.enrolledCourses=data);
+      if(this.user.userId!=null){
+    this.upskillService.getEnrolledCoursesById(this.user.userId).subscribe(data=>this.enrolledCourses=data);
+      }
+    })
   }
 
   

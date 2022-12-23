@@ -6,6 +6,7 @@ import { Course } from '../models/Course';
   providedIn: 'root'
 })
 export class CartService {
+  public flag:boolean=false;
   cartData=new EventEmitter<Course[] | []>();
   public cartItemList: any = [];
   public productList = new BehaviorSubject<any>([]);

@@ -31,6 +31,7 @@ import { NavbargoodlookingComponent } from './components/navbargoodlooking/navba
 import { Features2Component } from './components/features2/features2.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { EnrolledCoursesComponent } from './components/enrolled-courses/enrolled-courses.component';
+import { HomePageComponent } from './components/home-page/home-page.component';
 
 
 const routes: Routes=[
@@ -44,6 +45,10 @@ const routes: Routes=[
     path:"login",
     component:LoginComponent,
     
+  },
+  {
+    path:"home",
+    component:HomeComponent    
   },
 
   {
@@ -82,6 +87,10 @@ const routes: Routes=[
   {
     path:"aboutUs",
     component:AboutUsComponent
+  },
+  {
+    path:"mentor-home-page",
+    component:MentorHomeComponent
   }
 
 ]
@@ -106,10 +115,10 @@ const routes: Routes=[
     AddCourseComponent,
     CartComponent,
     MentorHomeComponent,
-    NavbargoodlookingComponent,
     Features2Component,
     AboutUsComponent,
-    EnrolledCoursesComponent,
+    HomePageComponent,
+    NavbargoodlookingComponent
   ],
 
   imports: [

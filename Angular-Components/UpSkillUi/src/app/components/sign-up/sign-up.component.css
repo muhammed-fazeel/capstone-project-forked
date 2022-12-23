@@ -3,7 +3,7 @@
     height: 100vh;
     overflow: hidden;
     /* background-color: #00ADB5;   */
-    background-image: url('./gradient1.svg');
+    /* background-image: url('./gradient1.svg'); */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -28,6 +28,9 @@
 #particles-js {
     height: 100%
 }
+label{
+    color: black;
+}
 
 .loginBox {
     position: absolute;
@@ -35,13 +38,18 @@
     left: 50%;
     transform: translate(-50%, -50%);
     width: 300px;
-    min-height: 200px;
-    background: #000000;
     border-radius: 10px;
     padding: 40px;
     padding-bottom: 1rem;
     box-sizing: border-box;
-    /* box-shadow: 2px 2px 50px black; */
+    background-color: transparent;
+    backdrop-filter: blur(50px);
+    border-radius: 10px;
+    padding: 40px;
+    color: black;
+    box-sizing: border-box;
+    margin-top: 20px;
+    box-shadow: 10px 10px 40px #b4b2b2;
 }
 
 .user {
@@ -69,6 +77,7 @@ h3 {
     outline: none;
     height: 30px;
     color: #fff;
+
     background: transparent;
     font-size: 16px;
     padding-left: 20px;

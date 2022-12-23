@@ -1,11 +1,46 @@
 <div class="row">
     <div class="col-md-8">
         <div [ngClass]="textclass">
-            <h2>start your learning journey</h2>
+            <h2 style="padding-bottom: 30rem;">start your learning journey</h2>
         </div>
         <div class="video">
-            <iframe width="720" height="415" [attr.src]="present_video" id="video">
+            <iframe style="box-shadow: 1px 1px 6px black;" width="720" height="415" [attr.src]="present_video" id="video">
             </iframe>
+            <h2>{{coursetitle}}</h2>
+            <hr>
+            <div class="description">
+                <p>{{course.description}}</p>
+            </div>
+            <h5>Reviews</h5>
+       <div class="form">
+        <form #f1="ngForm" (ngSubmit)="addReview()">
+            <div class="form-group">
+              <label for="exampleInputEmail1">Add a review</label><br>
+<!-- ------------------rating---------------- -->
+<span class="star-rating" style="margin-bottom:0.5rem;margin-top:0.5rem">
+    <input type="radio" name="rating" value="1" #option1="ngModel" [(ngModel)]="review.rating"><i></i>
+    <input type="radio" name="rating" value="2" #option2="ngModel" [(ngModel)]="review.rating"><i></i>
+    <input type="radio" name="rating" value="3" #option3="ngModel" [(ngModel)]="review.rating"><i></i>
+    <input type="radio" name="rating" value="4" #option4="ngModel" [(ngModel)]="review.rating"><i></i>
+    <input type="radio" name="rating" value="5" #option5="ngModel" [(ngModel)]="review.rating"><i></i>
+  </span>
+<!-- ------------------rating end---------------------- -->
+
+
+              <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="type here" name="description" #description="ngModel" [(ngModel)]="review.description" >
+              <small id="emailHelp" class="form-text text-muted">Your reviews are public.</small>
+            </div>
+            <button type="submit" class="btn btn-primary">Post</button>
+            </form>
+       </div>
+<!-- --------------------review form end--------------------- -->
+
+            <div class="reviews" *ngFor="let r of reviews">
+                <span style="margin: 0;font-weight:bold">{{r.author}}</span><span style="margin-left: 1rem;font-size:small">{{r.date}}</span>
+                <p style="margin: 0;">{{r.rating}}<img style="width:1rem;margin-bottom:0.2rem" src="./assets/images/star.png" alt=""></p>
+                <p>{{r.description}}</p>
+                <hr>
+            </div>
         </div>
     </div>
     <div class="col-md-4">
@@ -16,4 +51,5 @@
     </ol>
     </div>
 </div>
+d
 

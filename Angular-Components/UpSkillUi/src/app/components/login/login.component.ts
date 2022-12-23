@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AuthenticationService } from 'src/app/services/authentication.service';
 import { FormControl, FormGroup } from '@angular/forms';
 import { User } from 'src/app/models/User';
+import { CartService } from 'src/app/services/cart.service';
 
 
 @Component({
@@ -35,6 +36,7 @@ export class LoginComponent implements OnInit {
 
   loginSubmit(user:User) { 
     this.authService.authenticateUser(user); 
+    // location.reload();
         
   }
 }
