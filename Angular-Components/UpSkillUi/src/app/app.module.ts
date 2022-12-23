@@ -32,6 +32,7 @@ import { Features2Component } from './components/features2/features2.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { EnrolledCoursesComponent } from './components/enrolled-courses/enrolled-courses.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
+import { CarouselModule } from 'primeng/carousel';
 
 
 const routes: Routes=[
@@ -127,7 +128,8 @@ const routes: Routes=[
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    CarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]

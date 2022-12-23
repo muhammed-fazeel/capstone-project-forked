@@ -1,12 +1,46 @@
 <h2><b>Top Courses</b></h2>
-<section class="product">
+
+<div class="content-section implementation carousel-demo">
+  <div class="card">
+      <p-carousel [value]="courses" styleClass="custom-carousel" [numVisible]="6" [numScroll]="6"
+      [circular]="true" [autoplayInterval]="0" [responsiveOptions]="responsiveOptions">
+          <ng-template let-course pTemplate="item">
+            <div class="item card">
+              <img src="{{course.thumbnailUrl}}" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h4 class="card-title">{{course.title}}</h4>
+                <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                <button type="button" class="card swiper-slide item carousel slide" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+          style="color: black;" (click)="openModal(course.courseId)">something</button>
+              </div>
+            </div>
+          </ng-template>
+      </p-carousel>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <section class="product">
   <div class="container-fluid">
     <div class="slider-wrap">
       <div class="slider-main">
-        <button type="button" class="card swiper-slide item" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+        <button type="button" class="card swiper-slide item carousel slide" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
           style="color: black;" *ngFor="let d of courses" (click)="openModal(d.courseId)">
           <div class="image-box">
-            <img src="assets/images/{{d.thumbnailUrl}}" alt="NO_IMAGE">
+            <img src={{d.thumbnailUrl}}  alt="NO_IMAGE">
           </div>
           <div class="profile-details">
             <div class="name-job">
@@ -23,7 +57,8 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
+
 
 <!-- MODAL BOX -->
 <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
