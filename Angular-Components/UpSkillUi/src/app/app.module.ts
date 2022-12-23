@@ -83,6 +83,10 @@ const routes: Routes=[
   {
     path:"aboutUs",
     component:AboutUsComponent
+  },
+  {
+    path:"mentor-home-page",
+    component:MentorHomeComponent
   }
 
 ]

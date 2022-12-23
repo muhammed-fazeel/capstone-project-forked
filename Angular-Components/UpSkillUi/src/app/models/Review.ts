@@ -1,14 +1,13 @@
 import { Component } from "@angular/core";
 
 export class Review{
-    reviewId:number;
+    reviewId?:number;
     courseId:number;
     author:string;
     date:Date;
     rating:number;
     description:string;
-    constructor(reviewId:number,courseId:number,author:string,date:Date,rating:number,description:string){
-       this.reviewId=reviewId;
+    constructor(courseId:number,author:string,date:Date,rating:number,description:string){
        this.courseId=courseId;
        this.author=author;
        this.date=date;

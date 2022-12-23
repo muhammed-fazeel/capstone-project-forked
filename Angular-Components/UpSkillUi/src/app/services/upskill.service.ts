@@ -65,6 +65,9 @@ export class UpskillService {
   getReviews(courseId:number):Observable<Review[]>{
     return this.http.get<Review[]>(this.baseUrl+"GetReviews/"+courseId)
   }
+  addReview(review:Review):Observable<Review>{
+    return this.http.post<Review>(this.baseUrl+"AddReview",review)
+  }
 
 
   getEnrolledCoursesById(userId:number):Observable<Course[]>{
