@@ -32,11 +32,16 @@ import { Features2Component } from './components/features2/features2.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
 import { EnrolledCoursesComponent } from './components/enrolled-courses/enrolled-courses.component';
+import { CarouselModule } from 'primeng/carousel';
+import { CardModule } from 'primeng/card';
+import { UploadedCoursesComponent } from './components/uploaded-courses/uploaded-courses.component';
+
 
 const routes: Routes=[
   {
     path:"",
     component:BaseComponent,
+    canActivate:[RouteGuard1]
 
   },
 
@@ -89,7 +94,8 @@ const routes: Routes=[
   },
   {
     path:"mentor-home-page",
-    component:MentorHomeComponent
+    component:MentorHomeComponent,
+    canActivate:[RouteGuard2]
   }
 
 ]
@@ -118,7 +124,9 @@ const routes: Routes=[
     AboutUsComponent,
     HomePageComponent,
     NavbargoodlookingComponent,
-    EnrolledCoursesComponent
+    EnrolledCoursesComponent,
+    UploadedCoursesComponent,
+    
   ],
 
   imports: [
@@ -127,7 +135,9 @@ const routes: Routes=[
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    CarouselModule,
+    CardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

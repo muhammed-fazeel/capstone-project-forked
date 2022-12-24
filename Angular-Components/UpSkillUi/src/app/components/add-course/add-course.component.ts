@@ -20,7 +20,9 @@ export class AddCourseComponent implements OnInit {
   }
 
   addCourse(){
-    this.upSkillService.addCourse(this.course).subscribe(res=>{this.router.navigate([""]);})
+    this.upSkillService.addCourse(this.course).subscribe(res=>{this.router.navigate(["mentor-home-page"]);})
+
+
   }
 
 }

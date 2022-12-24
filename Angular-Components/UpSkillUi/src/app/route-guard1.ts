@@ -18,7 +18,9 @@ export class RouteGuard1 implements CanActivate {
     
     //for mentor
     if(localStorage.getItem("roleId")=="2"){
+      this.router.navigate(["mentor-home-page"])
       return false;
+
     }
 
     return true;

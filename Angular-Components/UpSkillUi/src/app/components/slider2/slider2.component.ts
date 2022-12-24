@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Course } from 'src/app/models/Course';
 import { UpskillService } from 'src/app/services/upskill.service';
 import { CartService } from 'src/app/services/cart.service';
+import { CarouselModule } from 'primeng/carousel';
 
 @Component({
   selector: 'app-slider2',
@@ -9,13 +10,19 @@ import { CartService } from 'src/app/services/cart.service';
   styleUrls: ['./slider2.component.css']
 })
 export class Slider2Component implements OnInit {
-
+  responsiveOptions: any;
   courses: Course[] = []
   cor: Course = new Course(1,"",1,"",1,1,1,"","");
   rating_arr: number[] = [];
   public productList:any;
 
-  constructor(private upskillService: UpskillService, private cartService: CartService) { }
+  constructor(private upskillService: UpskillService, private cartService: CartService) { 
+    this.responsiveOptions = [{
+      breakpoint: '1024px',
+      numVisible: 3,
+      numScroll: 3
+  }];
+  }
   formModal: any;
   ngOnInit(): void {
     console.log("service called!")

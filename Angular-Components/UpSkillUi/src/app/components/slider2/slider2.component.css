@@ -1,15 +1,20 @@
 /* CARD CSS */
-.product {
+/* .product {
   padding: 20px 0;
-}
+} */
 
-.slider-wrap {
+/* .slider-wrap {
   position: relative;
-  overflow: hidden;
+  overflow-x:scroll;
   height: 350px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
+.slider-wrap::-webkit-scrollbar{
+  display: none;
+} */
 
-.slider-main {
+/* .slider-main {
   position: absolute;
   width: 200%;
 }
@@ -20,8 +25,8 @@
   height: 250px;
   position: relative;
   margin: 0 12px;
-}
-
+} */
+/* 
 .title-hyperlink {
   text-decoration: none;
   font-weight: bolder;
@@ -34,8 +39,8 @@ body {
   align-items: center;
   justify-content: center;
   background: #efefef;
-}
-
+} */
+/* 
 .card {
   height: 250px;
   margin: 10px;
@@ -47,9 +52,9 @@ body {
   width: 230px;
   background-color: white;
   margin: auto;
-}
+} */
 
-.card .image-box img {
+/* .card .image-box img {
   width: 100%;
   height: 100%;
 }
@@ -58,9 +63,9 @@ body {
   display: flex;
   align-items: center;
   column-gap: 12px;
-}
+} */
 
-.card img {
+/* .card img {
   height: 40px;
   width: 40px;
 }
@@ -72,9 +77,9 @@ body {
   font-size: 12px;
   font-weight: 500;
   color: #4d4d4d;
-}
+} */
 
-.name {
+/* .name {
   font-size: 12px;
   font-weight: lighter;
   margin: 0;
@@ -84,8 +89,8 @@ body {
   font-size: 20px;
   margin: 0;
   color: green;
-}
-
+} */
+/* 
 .prev {
   position: absolute;
   left: 40px;
@@ -98,9 +103,9 @@ body {
   right: -30px;
   top: 40%;
   transform: translate(-50%, -50%);
-}
+} */
 
-.btnx {
+/* .btnx {
   height: 50px;
   width: 50px;
   border-radius: 100%;
@@ -117,13 +122,13 @@ body {
 .name-job {
   padding: 10px;
   text-align: left;
-}
+} */
 
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
   .swiper-navBtn {
     display: none;
   }
-}
+} */
 
 /* ************************************************************************* */
 
