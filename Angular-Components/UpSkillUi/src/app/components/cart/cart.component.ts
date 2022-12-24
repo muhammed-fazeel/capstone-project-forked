@@ -67,7 +67,7 @@ export class CartComponent implements OnInit {
       this.enrolledCourse.userId=res.userId;   
       
       this.enrolledCourse.courseID=courseId;
-      this.upskillService.addEnrolledCourse(this.enrolledCourse).subscribe(res=>{this.router.navigate(["profile"])})
+      this.upskillService.addEnrolledCourse(this.enrolledCourse).subscribe(res=>{this.router.navigate(["profile"]);})
     });
     //this.enrolledCourse.userId=this.localUserId ;
     //console.log("the userId is: "+ this.localUserId);
