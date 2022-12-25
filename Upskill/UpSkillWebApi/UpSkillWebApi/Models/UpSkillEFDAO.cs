@@ -81,9 +81,24 @@ namespace UpSkillWebApi.Models
             return lstCourses;
         }
 
-        public List<EnrolledCourses> GetAllEnrolledCoursesByUserId(int id)
+        public List<Course> GetAllEnrolledCoursesByUserId(int id)
         {
-            throw new NotImplementedException();
+            //join course c on enrolledCourses e where id=userId 
+            var courses = new List<Course>();
+            var enrolledCourses = dbCtx.EnrolledCourse.Where(o => o.UserId == id).ToList();
+            foreach (var course in enrolledCourses)
+            {
+                courses.Add(this.GetCourse(course.CourseID));
+
+            }
+            return courses;
+        }
+        public void AddEnrolledCourse(EnrolledCourses course)
+        {
+            dbCtx.EnrolledCourse.Add(course);
+            dbCtx.SaveChanges();
+
+
         }
 
         //goes to the course page
