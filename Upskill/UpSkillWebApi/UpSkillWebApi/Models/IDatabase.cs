@@ -28,7 +28,8 @@
         public void DeleteAllVideos(int CourseID);
 
         //calls for enrolled courses
-        public List<EnrolledCourses> GetAllEnrolledCoursesByUserId(int id);
+        public List<Course> GetAllEnrolledCoursesByUserId(int id);
+        public void AddEnrolledCourse(EnrolledCourses enrolledcourses);
 
         public void AddCourse(EnrolledCourses course,int UserId);  // adding the course to user's enrolled courses 
 

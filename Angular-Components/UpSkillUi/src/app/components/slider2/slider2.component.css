@@ -244,3 +244,11 @@ body {
 .rating-div {
   display: inline-block;
 }
+
+
+.container{
+  margin-bottom: 5rem;
+}
+h2{
+  margin:2rem
+}
