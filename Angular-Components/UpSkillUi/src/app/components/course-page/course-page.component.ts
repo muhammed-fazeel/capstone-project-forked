@@ -22,7 +22,7 @@ export class CoursePageComponent implements OnInit {
   coursetitle:string="";
   videolinks:VideoLinks[]=[];
   reviews:Review[]=[];
-  roleId:boolean=true;
+  roleId:boolean=false;
   present_video:SafeResourceUrl="https://www.youtube.com/watch?v=nOY0TWWvynU";
   constructor(private upskillservice:UpskillService,public sanitizer:DomSanitizer,private activatedRoute:ActivatedRoute,private router:Router) { }
 

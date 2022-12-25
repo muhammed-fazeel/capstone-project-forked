@@ -1,3 +1,10 @@
+.navbar{
+    position:relative ;
+    z-index: 9;
+    width: 100%;
+    top:0;
+    
+}
 .navbar-brand{
     font-weight: bold;
     font-size: 1.5rem;
@@ -11,7 +18,7 @@
     color: black;
 }
 .bg-lightt{
-    background-color: white
+    background-color:whitesmoke
     /* background-image: url('gradient1.svg'); */
     
     /* background-position: center;

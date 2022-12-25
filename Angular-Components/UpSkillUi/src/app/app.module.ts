@@ -35,6 +35,7 @@ import { EnrolledCoursesComponent } from './components/enrolled-courses/enrolled
 import { CarouselModule } from 'primeng/carousel';
 import { CardModule } from 'primeng/card';
 import { UploadedCoursesComponent } from './components/uploaded-courses/uploaded-courses.component';
+import { TestimonialsComponent } from './components/testimonials/testimonials.component';
 
 
 const routes: Routes=[
@@ -126,7 +127,7 @@ const routes: Routes=[
     NavbargoodlookingComponent,
     EnrolledCoursesComponent,
     UploadedCoursesComponent,
-    
+    TestimonialsComponent,
   ],
 
   imports: [
