@@ -22,10 +22,16 @@ export class CoursePageComponent implements OnInit {
   coursetitle:string="";
   videolinks:VideoLinks[]=[];
   reviews:Review[]=[];
+  roleId:boolean=true;
   present_video:SafeResourceUrl="https://www.youtube.com/watch?v=nOY0TWWvynU";
   constructor(private upskillservice:UpskillService,public sanitizer:DomSanitizer,private activatedRoute:ActivatedRoute,private router:Router) { }
 
   ngOnInit(): void {
+
+    if(localStorage.getItem("roleId") as unknown as string=="2"){
+      this.roleId=true;
+  };
+
       this.activatedRoute.params.subscribe(params => {
         // console.log(params);
         this.courseId = params["id"];

@@ -19,6 +19,7 @@ export class UploadedCoursesComponent implements OnInit {
   all_courses:Course[]=[];
   user_courses:Course[]=[];
   user:User=new User(1,1,"default","default","default","blah");
+  roleId?:boolean=false;
 
 
   //fetch this name from the database
@@ -27,6 +28,9 @@ export class UploadedCoursesComponent implements OnInit {
   constructor(private router:Router, private upSkillService:UpskillService) { }
 
   ngOnInit(): void {
+
+
+
 
     this.upSkillService.getUserByEmail().subscribe(data=>{
       this.user.email=data.email;
