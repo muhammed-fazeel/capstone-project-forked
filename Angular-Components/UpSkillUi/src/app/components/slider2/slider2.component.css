@@ -132,9 +132,7 @@ body {
 
 /* ************************************************************************* */
 
-.card-img-top{
-  height: 150px;
-}
+
 
 .rating {
   background-color: rgb(234, 234, 136);
@@ -170,39 +168,40 @@ body {
 }
 
 .modal-dialog{
-  /* margin-right: 550px; */
+  margin-right: 550px;
+  /* border: 2px solid  red; */
+  /* margin: auto; */
 }
 
 .image-container {
   float: left;
   display: flex;
   flex-direction: column;
-  width: 27vw;
-}
-
-.btn-container {
-  margin-top: 30px;
-  margin-left: 80px;
+  width: 15vw;
+  /* border: 2px solid red; */
 }
 
 .course-details {
   background-color: #fff;
   width: 380px;
   float: right;
+  /* border: 2px solid yellow; */
 }
 
-.modal.show .modal-dialog {
-  transform: none;
-  margin-right: 550px;
+.btn-container {
+  margin-top: 30px;
+  margin-left: 70px;
+  text-align: center;
 }
 
 .modal-dialog{
   margin-right: 420px;
+  /* margin: auto; */
 }
 
 .modal-content {
-  width: 55vw;
-  /* margin-right: 400px; */
+  width: 52vw;
+  margin-right: 200px;
 }
 
 .btns {
