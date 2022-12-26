@@ -23,6 +23,8 @@ export class CoursePageComponent implements OnInit {
   videolinks:VideoLinks[]=[];
   reviews:Review[]=[];
   roleId:boolean=false;
+  course_flag=0;
+  temp_test?=0;
   present_video:SafeResourceUrl="https://www.youtube.com/watch?v=nOY0TWWvynU";
   constructor(private upskillservice:UpskillService,public sanitizer:DomSanitizer,private activatedRoute:ActivatedRoute,private router:Router) { }
 
@@ -50,7 +52,39 @@ export class CoursePageComponent implements OnInit {
     this.upskillservice.getUserByEmail().subscribe(data=>{
       this.author=data.userName;
       console.log(this.author);
+      this.upskillservice.getEnrolledCoursesById(data.userId as unknown as number).subscribe(res=>{
+        for (const course of res) {
+          if(course.courseId==this.course.courseId){
+            this.course_flag=1;
+            this.temp_test=course.courseId;
+
+            break;
+          }
+          
+
+
+
+
+
+
+        }
+
+        if(this.course_flag==0){
+          console.log(this.temp_test,this.course.courseId,this.course_flag);
+          alert("You are not enrolled");
+          this.router.navigate(['/']);
+
+
+
+        }
+
+
+
+      })
+
     })
+
+
   }
   showVideo(v:VideoLinks){
     this.present_video=this.sanitizer.bypassSecurityTrustResourceUrl(v.url);
