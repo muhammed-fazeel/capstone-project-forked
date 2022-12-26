@@ -16,14 +16,14 @@ import { User } from 'src/app/models/User';
 })
 export class CartComponent implements OnInit {
 
-  public product: any=[];
+  public product: any = [];
   public grandTotal !: number;
   rating_arr: number[] = [];
-  enrolledCourse:EnrolledCourses=new EnrolledCourses(10,10);
+  enrolledCourse: EnrolledCourses = new EnrolledCourses(10, 10);
   // localUser:User=new User(0,1,"","","","");
-  localUserId:any=100;
-  
-  constructor(private cartService: CartService, private upskillService:UpskillService , private router:Router) { }
+  localUserId: any = 100;
+
+  constructor(private cartService: CartService, private upskillService: UpskillService, private router: Router) { }
 
   ngOnInit(): void {
     // this.cartService.getProduct()
@@ -31,49 +31,40 @@ export class CartComponent implements OnInit {
     //   this.product=res;
     //   this.grandTotal=this.cartService.getTotalPrice();
     // })
-    var courses=localStorage.getItem("localCart");
-    var cart=courses!==null?JSON.parse(courses):"nothing";
-    this.product=cart;
+    var courses = localStorage.getItem("localCart");
+    var cart = courses !== null ? JSON.parse(courses) : "nothing";
+    this.product = cart;
 
 
   }
 
-  removeItem(courseId: Number){
-    // this.cartService.removeCartItem(item);
-    // console.log(item);
-
-    let cartData=localStorage.getItem('localCart');
-    if(cartData){
-      let items:Course[]=JSON.parse(cartData);
-      items=items.filter((items:Course)=>courseId!=items.courseId);
-      localStorage.setItem('localCart',JSON.stringify(items));
+  removeItem(courseId: Number) {
+    let cartData = localStorage.getItem('localCart');
+    if (cartData) {
+      let items: Course[] = JSON.parse(cartData);
+      items = items.filter((items: Course) => courseId != items.courseId);
+      localStorage.setItem('localCart', JSON.stringify(items));
     }
     location.reload();
   }
 
-  emptyCart(){
+  emptyCart() {
     this.cartService.removeAllCart();
-    localStorage.setItem("localCart","");
+    localStorage.setItem("localCart", "");
     location.reload();
-
-    // this.router.navigate(["/profile"]);
-    
   }
 
-  enroll(courseId:number){
+  enroll(courseId: number) {
 
-    this.upskillService.getUserByEmail().subscribe(res=>{this.localUserId=res.userId;
-      console.log("the userId is: "+ this.localUserId);
-      this.enrolledCourse.userId=res.userId;   
-      
-      this.enrolledCourse.courseID=courseId;
-      this.upskillService.addEnrolledCourse(this.enrolledCourse).subscribe(res=>{this.router.navigate(["profile"]);})
+    this.upskillService.getUserByEmail().subscribe(res => {
+      this.localUserId = res.userId;
+      console.log("the userId is: " + this.localUserId);
+      this.enrolledCourse.userId = res.userId;
+
+      this.enrolledCourse.courseID = courseId;
+      this.upskillService.addEnrolledCourse(this.enrolledCourse).subscribe(res => { this.router.navigate(["profile"]); })
     });
-    //this.enrolledCourse.userId=this.localUserId ;
-    //console.log("the userId is: "+ this.localUserId);
-    
-    // =userId;
-   
+
   }
 
 }
