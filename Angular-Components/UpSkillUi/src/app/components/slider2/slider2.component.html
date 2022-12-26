@@ -1,64 +1,25 @@
-<div class="container"><h2><b>Top Courses</b></h2>
+<div class="container">
+  <h2><b>Top Courses</b></h2>
 
-<div class=" content-section implementation carousel-demo">
-  <div class="card">
-      <p-carousel [value]="courses" styleClass="custom-carousel" [numVisible]="6" [numScroll]="6"
-      [circular]="true" [autoplayInterval]="0" [responsiveOptions]="responsiveOptions">
-          <ng-template let-course pTemplate="item">
-            <div class="item card">
-              <img src="{{course.thumbnailUrl}}" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h4 class="card-title">{{course.title}}</h4>
-                <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
-                <button type="button" class="card swiper-slide item carousel slide" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
-          style="color: black;" (click)="openModal(course.courseId)">something</button>
-              </div>
+  <div class=" content-section implementation carousel-demo">
+    <div class="card">
+      <p-carousel [value]="courses" styleClass="custom-carousel" [numVisible]="5" [numScroll]="6" [circular]="true"
+        [autoplayInterval]="0" [responsiveOptions]="responsiveOptions">
+        <ng-template let-course pTemplate="item">
+          <div class="item card">
+            <img src="assets/images/{{course.thumbnailUrl}} " class="card-img-top" alt="...">
+            <div class="card-body" >
+              <h4 class="card-title">{{course.title}}</h4>
+              <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop" (click)="openModal(course.courseId)">Details</button> -->
+              <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop" (click)="openModal(course.courseId)">Details</button>
             </div>
-          </ng-template>
+          </div>
+        </ng-template>
       </p-carousel>
-  </div>
-</div>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- <section class="product">
-  <div class="container-fluid">
-    <div class="slider-wrap">
-      <div class="slider-main">
-        <button type="button" class="card swiper-slide item carousel slide" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
-          style="color: black;" *ngFor="let d of courses" (click)="openModal(d.courseId)">
-          <div class="image-box">
-            <img src={{d.thumbnailUrl}}  alt="NO_IMAGE">
-          </div>
-          <div class="profile-details">
-            <div class="name-job">
-              <a href="" class="title-hyperlink"><b>{{d.title}}</b></a>
-              <p class="name">{{d.author}}</p>
-              <p class="pricex"><b>₹ {{d.price}}</b></p>
-            </div>
-          </div>
-        </button>
-      </div>
-      <div>
-        <button class="prev btnx button" appPrev>&lt;&lt;</button>
-        <button class="next btnx button" appNext>&gt;&gt;</button>
-      </div>
     </div>
   </div>
-</section> -->
 
+</div>
 
 <!-- MODAL BOX -->
 <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
@@ -71,41 +32,41 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="row">
-      <div class="modal-body col-md-4">
-        <div class="image-container">
-          <img src="assets/images/{{cor.thumbnailUrl}}" alt="NO-Image" class="course-image">
-          <div class="btn-container">
-            <div class="bts">
-              <Button class="cart-button btns" (click)="addToCart(cor)"  data-bs-dismiss="modal">Add to cart</Button>
-            </div>
-            <div class="bts">
-              <a href="course-page/{{cor.courseId}}"><Button class="more-detail btns">Course Page</Button></a>
-            </div>
-          </div>
-        </div>
-        <div class="course-details">
-          <div>
-            <a href="" class="title-hyperlink">{{cor.title}}</a>
-            <div class="extra-details">
-              <span class="rating">{{cor.rating}} star</span>
-              <div *ngFor="let i of rating_arr" class="rating-div">
-                <img src="assets/images/star2.png" alt="" class="rating-star">
+        <div class="modal-body col-md-4">
+          <div class="image-container">
+            <img src="assets/images/{{cor.thumbnailUrl}}" alt="NO-Image" class="course-image">
+            <div class="btn-container">
+              <div class="bts">
+                <Button class="btn btn-primary" (click)="addToCart(cor)" data-bs-dismiss="modal">Add to cart</Button>
               </div>
-              <div><span class="price">Price <b>₹{{cor.price}}</b></span></div>
+              <div class="bts">
+                <a href="course-page/{{cor.courseId}}"><Button class="btn btn-outline-primary"
+                    style="margin-left: 5px;">Course Page</Button></a>
+              </div>
             </div>
-            <span class="course-duration">Total {{cor.duration}} hours</span>
+          </div>
+          <div class="course-details">
             <div>
-              {{cor.description}} 
-              <!-- Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque debitis cupiditate enim, dolorum neque, aut dignissimos architecto asperiores delectus, vel quidem perspiciatis odit quasi voluptas rem adipisci impedit facere sit. -->
+              <a href="" class="title-hyperlink">{{cor.title}}</a>
+              <div class="extra-details">
+                <span class="rating">{{cor.rating}} star</span>
+                <div *ngFor="let i of rating_arr" class="rating-div">
+                  <img src="assets/images/star2.png" alt="" class="rating-star">
+                </div>
+                <div><span class="price">Price <b>₹{{cor.price}}</b></span></div>
+              </div>
+              <span class="course-duration">Total {{cor.duration}} hours</span>
+              <div>
+                {{cor.description}}
+              </div>
+              <ul>
+                <li>Create their own Python Programs</li>
+                <li>Parse the Web and Create their own Games</li>
+                <li>Become an experienced Python Programmer</li>
+              </ul>
             </div>
-            <ul>
-              <li>Create their own Python Programs</li>
-              <li>Parse the Web and Create their own Games</li>
-              <li>Become an experienced Python Programmer</li>
-            </ul>
           </div>
         </div>
-      </div>
       </div>
     </div>
   </div>
