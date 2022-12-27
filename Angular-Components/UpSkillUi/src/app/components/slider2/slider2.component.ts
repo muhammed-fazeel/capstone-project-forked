@@ -7,7 +7,7 @@ import { CarouselModule } from 'primeng/carousel';
 @Component({
   selector: 'app-slider2',
   templateUrl: './slider2.component.html',
-  styleUrls: ['./slider2.component.scss']
+  styleUrls: ['./slider2.component.Scss']
 })
 export class Slider2Component implements OnInit {
   responsiveOptions: any;
