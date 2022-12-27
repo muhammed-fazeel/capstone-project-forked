@@ -2,16 +2,16 @@
   <h2><b>Top Courses</b></h2>
 
   <div class=" content-section implementation carousel-demo">
-    <div class="card">
+    <div class="card" >
       <p-carousel [value]="courses" styleClass="custom-carousel" [numVisible]="5" [numScroll]="6" [circular]="true"
         [autoplayInterval]="0" [responsiveOptions]="responsiveOptions">
         <ng-template let-course pTemplate="item">
           <div class="item card">
             <img src="{{course.thumbnailUrl}} " class="card-img-top" alt="...">
-            <div class="card-body" >
+            <div class="card-body d-flex flex-column" >
               <h4 class="card-title">{{course.title}}</h4>
               <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop" (click)="openModal(course.courseId)">Details</button> -->
-              <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop" (click)="openModal(course.courseId)">Details</button>
+              <button type="button" class="mt-auto btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop" (click)="openModal(course.courseId)">Details</button>
             </div>
           </div>
         </ng-template>

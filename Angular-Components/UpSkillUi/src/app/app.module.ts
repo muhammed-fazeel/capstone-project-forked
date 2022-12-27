@@ -96,7 +96,7 @@ const routes: Routes=[
   {
     path:"mentor-home-page",
     component:MentorHomeComponent,
-    canActivate:[RouteGuard2]
+    canActivate:[RouteGuard,RouteGuard2]
   }
 
 ]

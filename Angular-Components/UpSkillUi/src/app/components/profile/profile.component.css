@@ -140,3 +140,12 @@ img{
     height: auto;
     border-radius: 100%;
 }
+
+.course-title{
+    text-decoration: none;
+    color: black;
+}
+
+.course-title:hover{
+    color: rgb(0, 140, 255);
+}

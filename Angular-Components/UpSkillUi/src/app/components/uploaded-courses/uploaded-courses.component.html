@@ -4,13 +4,13 @@
 
    
         <div class="col-md-3" *ngFor="let c of user_courses">
-            <div class="card" >
+            <div class="card" style="height: 260px;">
                 <img class="card-img-top" src="./assets/images/Development.png" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">{{c.title}}</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                    <a href="course-page/{{c.courseId}}" class="btn btn-primary">Go to Course</a>
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title"><b>{{c.title}}</b></h5>
+                    <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p> -->
+                    <a href="course-page/{{c.courseId}}" class="mt-auto btn btn-primary">Go to Course</a>
                 </div>
             </div>
 
@@ -18,8 +18,8 @@
         </div>
 
     <div class="col-md-3">
-        <div class="card" >
-            <div class="card-body" style="text-align: center;">
+        <div class="card" style="height: 260px;">
+            <div class="card-body" style="text-align: center;margin-top:50px ;">
                 <a href="add-course"> <i id="" class="fa fa-plus-circle fa-5x" aria-hidden="true"></i></a>
                 <h5 class="card-title">Add Course</h5>
 
