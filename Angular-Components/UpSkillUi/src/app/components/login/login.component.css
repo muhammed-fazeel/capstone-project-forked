@@ -1,4 +1,4 @@
-.container-main{
+.container-main {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
@@ -9,12 +9,14 @@
     background-size: cover; */
 
 }
+
 .clearfix:after {
     content: "";
     display: table;
     clear: both;
-  }
-  .clearfix {
+}
+
+.clearfix {
     display: inline-block;
 }
 
@@ -25,7 +27,7 @@ html[xmlns] .clearfix {
 * html .clearfix {
     height: 1%;
 }
-  
+
 .login-container {
     /* background-image: url('./assets/bar-chart-white.svg'); */
     background-color: #00ffff;
@@ -35,14 +37,17 @@ html[xmlns] .clearfix {
     background-position: center;
 }
 
+#sign-up:hover {
+    color: #00ffff;
+}
+
 /* @media screen and (max-width: 600px ) {
     body {
         background-size: cover;
         /* : fixed */
-     /* } */
- /* }  */ */
-
-#particles-js {
+/* } */
+/* }  */
+*/ #particles-js {
     height: 100%
 }
 
@@ -71,7 +76,7 @@ html[xmlns] .clearfix {
     display: block;
     margin-bottom: 20px;
     /* width: 20%; */
-    
+
 }
 
 h3 {
@@ -92,7 +97,7 @@ h3 {
     border-bottom: 2px solid #262626;
     outline: none;
     height: 30px;
-    color: #fff;
+    color: #000;
     background: transparent;
     font-size: 16px;
     padding-left: 20px;
@@ -127,7 +132,7 @@ h3 {
     height: 40px;
     font-size: 16px;
     background: #59238F;
-    color: #fff;
+    color: #000;
     border-radius: 20px;
     cursor: pointer
 }
@@ -150,22 +155,25 @@ p {
 }
 
 /* radio buttons */
-.radio-buttons{
- text-align: center;
- margin-bottom: 1rem;
+.radio-buttons {
+    text-align: center;
+    margin-bottom: 1rem;
 }
 
-.container-radio{
+.container-radio {
     /* padding: 1rem; */
     /* position: absolute; */
 }
-.btn{
+
+.btn {
     width: 5rem;
 }
-.login-text{
+
+.login-text {
     font-weight: 500;
     font-size: 2rem;
 }
+
 /* .btn-sm{
     border-color: #59238F;
 } */

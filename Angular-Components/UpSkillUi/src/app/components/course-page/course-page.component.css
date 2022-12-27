@@ -25,9 +25,6 @@ padding: 3rem;
 .list-group{
     max-height: 30rem;
     margin-bottom: 10px;
-    /* overflow:scroll; */
-    /* -webkit-overflow-scrolling: touch; */
-    box-shadow: 1px 1px 6px black;
 }
 .list-group-item:hover{
     background-color: #EEEEEE;
@@ -111,5 +108,34 @@ padding: 3rem;
     text-align: center;
     vertical-align: middle;
   }
+
+  .list-group{
+    max-height: 200px;
+    margin-bottom: 10px;
+    overflow:scroll;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-color: black;
+}
+
+#title{
+  padding:5%;
+  font-weight: bold;
+  
+}
+
+#author{
+  font-weight: lighter;
+  font-size: smaller;
+  font-style: italic;
+}
+
+.rating-star {
+  height: 10px;
+}
+
+.rating-div {
+  display: inline-block;
+}
   
 /* rating end */

@@ -63,6 +63,9 @@
 	margin-bottom:0;
   }
   
+  .fa:hover{
+	color: #00ffff;
+  }
   
 /* .z-index{
 	z-index: 1;

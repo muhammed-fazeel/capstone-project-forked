@@ -26,6 +26,7 @@ export class CoursePageComponent implements OnInit {
   course_flag=0;
   temp_test?=0;
   present_video:SafeResourceUrl="https://www.youtube.com/watch?v=nOY0TWWvynU";
+  rating_arr:number[]=[]
   constructor(private upskillservice:UpskillService,public sanitizer:DomSanitizer,private activatedRoute:ActivatedRoute,private router:Router) { }
 
   ngOnInit(): void {
@@ -78,6 +79,10 @@ export class CoursePageComponent implements OnInit {
         }
 
 
+        }
+
+        for (let index = 0; index < this.course.rating; index++) {
+          this.rating_arr.push(index);
         }
 
 

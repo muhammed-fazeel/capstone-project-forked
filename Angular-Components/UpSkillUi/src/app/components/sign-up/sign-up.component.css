@@ -225,7 +225,7 @@ h3 {
     border-bottom: 2px solid #262626;
     outline: none;
     height: 30px;
-    color: #fff;
+    color: rgb(0, 0, 0);
 
     background: transparent;
     font-size: 16px;
@@ -247,7 +247,7 @@ h3 {
 
 .inputBox {
     position: relative;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 .inputBox span {
     position: absolute;
@@ -261,7 +261,7 @@ h3 {
     height: 40px;
     font-size: 16px;
     background: #59238F;
-    color: #fff;
+    color: rgb(0, 0, 0);
     border-radius: 20px;
     cursor: pointer
 }
