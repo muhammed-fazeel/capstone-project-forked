@@ -7,7 +7,7 @@
         [autoplayInterval]="0" [responsiveOptions]="responsiveOptions">
         <ng-template let-course pTemplate="item">
           <div class="item card">
-            <img src="assets/images/{{course.thumbnailUrl}} " class="card-img-top" alt="...">
+            <img src="{{course.thumbnailUrl}} " class="card-img-top" alt="...">
             <div class="card-body" >
               <h4 class="card-title">{{course.title}}</h4>
               <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop" (click)="openModal(course.courseId)">Details</button> -->

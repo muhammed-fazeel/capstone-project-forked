@@ -70,10 +70,12 @@ export class CoursePageComponent implements OnInit {
         }
 
         if(this.course_flag==0){
+
+          if(localStorage.getItem("roleId")!="2"){
           console.log(this.temp_test,this.course.courseId,this.course_flag);
           alert("You are not enrolled");
           this.router.navigate(['/']);
-
+        }
 
 
         }

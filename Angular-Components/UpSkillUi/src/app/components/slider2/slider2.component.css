@@ -137,7 +137,7 @@ body {
 .rating {
   background-color: rgb(234, 234, 136);
   padding: 5px;
-  border-radius: 5px;  
+  border-radius: 5px;
 }
 
 .title-hyperlink {
@@ -148,10 +148,10 @@ body {
 
 .price {
   font-size: 20px;
-  
+
 }
 
-.price > b {
+.price>b {
   color: green;
   font-size: 15px;
 }
@@ -167,7 +167,7 @@ body {
   margin: auto;
 }
 
-.modal-dialog{
+.modal-dialog {
   margin-right: 550px;
   /* border: 2px solid  red; */
   /* margin: auto; */
@@ -177,7 +177,7 @@ body {
   float: left;
   display: flex;
   flex-direction: column;
-  width: 15vw;
+  width: 25vw;
   /* border: 2px solid red; */
 }
 
@@ -190,17 +190,18 @@ body {
 
 .btn-container {
   margin-top: 30px;
-  margin-left: 70px;
+  /* margin-left: 70px; */
   text-align: center;
+  /* border: 2px solid red; */
 }
 
-.modal-dialog{
+.modal-dialog {
   margin-right: 420px;
   /* margin: auto; */
 }
 
 .modal-content {
-  width: 52vw;
+  width: 56vw;
   margin-right: 200px;
 }
 
@@ -211,7 +212,7 @@ body {
   border-radius: 15px;
 }
 
-.bts{
+.bts {
   display: inline;
 }
 
@@ -221,9 +222,10 @@ body {
   border: 2px solid rgb(0, 179, 255);
 }
 
-.cart-button:hover{
+.cart-button:hover {
   color: #fff;
-  background-color: rgb(0, 179, 255);;
+  background-color: rgb(0, 179, 255);
+  ;
 }
 
 .more-detail {
@@ -232,7 +234,7 @@ body {
   border: 2px solid green;
 }
 
-.more-detail:hover{
+.more-detail:hover {
   color: #fff;
   background-color: green;
 }
@@ -245,10 +247,14 @@ body {
   display: inline-block;
 }
 
+.card-img-top {
+  height: 180px;
+}
 
-.container{
+.container {
   margin-bottom: 5rem;
 }
-h2{
-  margin:2rem
+
+h2 {
+  margin: 2rem
 }
