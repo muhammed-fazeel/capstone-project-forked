@@ -20,8 +20,9 @@
         </div>
         <div class="col-md-2 btn-container">
             <div><button class="btn btn-primary add-to-cart" (click)="addToCart(c)">Add to cart</button></div>
-            <div><button class="btn btn-primary enroll">Enroll</button></div>
-            <div><button class="btn btn-primary more-details" >More Details</button></div>                                
+            <!-- <div><button class="btn btn-primary more-details" >More Details</button></div>   -->
+            <a href="course-page/{{c.courseId}}"><Button class="btn btn-outline-primary"
+                style="margin-left: 5px;">Course Page</Button></a>                              
         </div>
     </div>
 </div>

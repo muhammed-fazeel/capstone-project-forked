@@ -248,7 +248,7 @@ body {
 }
 
 .card-img-top {
-  height: 180px;
+  /* height: 180px; */
 }
 
 .container {
@@ -257,4 +257,8 @@ body {
 
 h2 {
   margin: 2rem
+}
+
+.card {
+  height: 300px;
 }
