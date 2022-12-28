@@ -19,5 +19,5 @@ steps:
     cd Angular-Components/UpSkillUi
     npm install -g @angular/cli --force
     npm install --force
-    ng build --prod --force
+    ng build --prod 
   displayName: 'npm install and build'
