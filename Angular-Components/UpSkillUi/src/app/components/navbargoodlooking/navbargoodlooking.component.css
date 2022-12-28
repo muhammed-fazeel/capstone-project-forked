@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
 .navbar{
     position:fixed ;
     z-index: 9;
@@ -10,6 +12,8 @@
     font-weight: bold;
     font-size: 1.5rem;
     color: black;
+    font-family: 'Bree Serif', serif;
+
 }
 .nav-item{
     padding-right: 2rem;
@@ -17,6 +21,12 @@
 }
 .nav-link{
     color: black;
+    font-family: 'Share Tech Mono', monospace;
+
+}
+.nav-link:hover{
+    color: grey;
+    
 }
 .bg-lightt{
     background-color:whitesmoke

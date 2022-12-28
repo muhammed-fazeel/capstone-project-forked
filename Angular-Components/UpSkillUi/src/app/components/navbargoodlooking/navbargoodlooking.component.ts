@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { CartService } from 'src/app/services/cart.service';
 
 @Component({
@@ -10,7 +11,7 @@ export class NavbargoodlookingComponent implements OnInit {
   logInFlag:boolean=true;
   public totalItem:number=0;
   mentor:boolean=false;
-  constructor(private cartService:CartService) {
+  constructor(private cartService:CartService,private router:Router) {
     console.log('flag:',this.cartService.flag);
     this.logInFlag=this.cartService.flag;
    }
@@ -35,6 +36,7 @@ export class NavbargoodlookingComponent implements OnInit {
   logout(){
     localStorage.clear();
     this.logInFlag=false;
+    // this.router.navigate(['/login'])
   }
 
 }

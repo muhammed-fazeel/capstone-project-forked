@@ -3758,19 +3758,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\asutosh.patnaik\\.nuget\\packages\\": {}
+    "C:\\Users\\muhamed.faseel\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\asutosh.patnaik\\OneDrive - Happiest Minds Technologies Limited\\Documents\\Desktop\\Project 5.0\\capstone-project\\Upskill\\UpSkillWebApi\\UpSkillWebApi\\UpSkillWebApi.csproj",
+      "projectUniqueName": "C:\\capstone_fresh2\\capstone-project\\Upskill\\UpSkillWebApi\\UpSkillWebApi\\UpSkillWebApi.csproj",
       "projectName": "UpSkillWebApi",
-      "projectPath": "C:\\Users\\asutosh.patnaik\\OneDrive - Happiest Minds Technologies Limited\\Documents\\Desktop\\Project 5.0\\capstone-project\\Upskill\\UpSkillWebApi\\UpSkillWebApi\\UpSkillWebApi.csproj",
-      "packagesPath": "C:\\Users\\asutosh.patnaik\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\asutosh.patnaik\\OneDrive - Happiest Minds Technologies Limited\\Documents\\Desktop\\Project 5.0\\capstone-project\\Upskill\\UpSkillWebApi\\UpSkillWebApi\\obj\\",
+      "projectPath": "C:\\capstone_fresh2\\capstone-project\\Upskill\\UpSkillWebApi\\UpSkillWebApi\\UpSkillWebApi.csproj",
+      "packagesPath": "C:\\Users\\muhamed.faseel\\.nuget\\packages\\",
+      "outputPath": "C:\\capstone_fresh2\\capstone-project\\Upskill\\UpSkillWebApi\\UpSkillWebApi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\asutosh.patnaik\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\muhamed.faseel\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
